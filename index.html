@@ -1,232 +1,280 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="Keywords" content="blog"/>
-    <meta name="Description" content="blog"/>
-    <title>Simple</title>
-    <link rel="shortcut icon" href="/static/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="msapplication-TileColor" content="#2b5797">
+<link href="http://cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="http://link0502.qiniudn.com/favourite.ico"/>
+<link rel="bookmark" href="http://link0502.qiniudn.com/favourite.ico"/>
+<title>优质导航 — 优秀从心开始</title>
 </head>
 <body>
-<div class="main">
-    <div class="header">
-        <ul id="pages">
-            <li>
-                <a href="/">home</a>
-            </li>
-            <li>
-                <a href="/#/tags">tags</a>
-            </li>
-            <li>
-                <a href="/#/archive">archive</a>
-            </li>
-        </ul>
-    </div>
-    <div class="wrap-header">
-        <h1>
-        <a href="/" id="title"></a>
-        </h1>
-    </div>
-    <div class="innermain" id="main">
-    </div>
-    <div class="footer">
-        <p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
-    </div>
+<div class="container">
+<div  class="page-header"></div>
+<div class="navbar navbar-fixed-top">    
+<div class="navbar-inner">
+<div class="container">
+<ul class="nav nav-pills">
+<li ><a href="#">首页</a></li>
+<li class="active"><a  href="#校内导航">校内</a></li>
+<li class="dropdown"><a href="#网站建设">网站建设</a></li>
+<li ><a href="#生活">生活</a></li>
+<li ><a href="#致命ID">致命ID</a></li>
+<li ><a href="#资源共享">资源共享</a></li>
+<li ><a href="commets">留言板</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">互联网<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">faxbox</a></li>
+<li><a href="#">markdownpad</a></li>
+<li><a href="#">Btsync</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">实验室<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">项目一：去中心化</a></li>
+<li><a href="#">项目二：Bootstrap</a></li>
+<li><a href="#">项目三：owncloud</a></li>
+<li><a href="#">项目四：网络策划与营销</a></li>
+<li><a href="#">项目五：网站安全</a></li>
+</ul>
+</li>
+<li><a href="#">&copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> 冷月城</a></li>
+</ul>
 </div>
-<script src="main.js"></script>
-<script id="itemTemplate" type="text/mustache">
-    {{#posts}}
-    <div class="item">
-        <div class="date">
-            <div class="little">
-            </div>
-            {{date}}
-        </div>
-        <div class="title">
-            <h2>
-                <a href="{{path}}">{{title}}</a>
-            </h2>
-        </div>
-    </div>
-    {{/posts}}
-    <ul class="pages">
-        Pages:
-        {{#pages}}
-            <li>
-            {{#select}}
-                <span class="selected">{{num}}</span>
-            {{/select}}
-            {{^select}}
-                <a href="{{path}}">{{num}}</a>
-            {{/select}}
-            </li>
-        {{/pages}}
-    </ul>
-</script>
-<script id="archiveTemplate" type="text/mustache">
-    {{#group}}
-    {{name}}
-    {{#posts}}
-    <div class="archive">
-    <span>{{date}}</span>
-    <a href="{{path}}">{{title}}</a>
-    </div>
-    {{/posts}}
-    {{/group}}
-</script>
-<script id="pagesTemplate" type="text/mustache">
-    {{#pages}}
-    <li>
-        <a href="{{path}}">{{title}}</a>
-    </li>
-    {{/pages}}
-</script>
-<script id="tagsTemplate" type="text/mustache">
-    <ul style="list-style: none">
-        {{#tags}}
-        <li style="display:inline; margin: 15px;">
-            <a href="{{path}}" style="font-size: {{size}}%">{{name}}</a>
-        </li>
-        {{/tags}}
-    </ul>
-</script>
-<script>
-$(document).ready(function() {
-    $.ajax({
-        url: "main.json",
-        type: "GET",
-        dataType: "json",
-        success: function(data) {
-            $("#title").html(data.name);
-            data.posts.sort(function(a, b){
-                if (a.date > b.date)
-                    return -1;
-                if (a.date < b.date)
-                    return 1;
-                return 0;
-            });
-            console.log(data.posts);
-            var per = data.number_of_posts_per_page;
-            var n = data.posts.length;
-            var num = Math.floor((n-1)/per)+1;
-            var arr = [];
-            var tmp = [];
-            for (var i = 0; i < n; ++i) {
-                if (i != 0 && i % per == 0) {
-                    arr.push(tmp)
-                    tmp = [];
-                }
-                tmp.push(data.posts[i]);
-            }
-            if (tmp.length > 0)
-                arr.push(tmp);
-            var pages = [{"select": true, "num": 1, "path": "#/page/1"}];
-            for (var i = 1; i < num; ++i)
-                pages.push({"select": false, "num": i+1, "path": "#/page/"+(i+1)});
-            var itemTemplate = Hogan.compile($("#itemTemplate").html());
-            var itemHtml = itemTemplate.render({"posts": arr[0], "pages": pages});
-            $("#main").html(itemHtml);
-            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
-            var pagesHtml = pagesTemplate.render({"pages": data.pages});
-            $("#pages").append(pagesHtml);
-            var App = Spine.Controller.sub({
-                el: $("#main"),
-                init: function() {
-                    this.routes({
-                        "/page/:page": function(page) {this.go(page);},
-                        "/tags": function() {this.tags();},
-                        "/tag/:tag": function(param) {this.tag(param);},
-                        "/archive": function() {this.archive();}
-                    });
-                    Spine.Route.setup();
-                },
-                go: function(page) {
-                    page = Math.floor(page.page);
-                    for (var i = 0; i < pages.length; ++i)
-                        pages[i].select = false;
-                    pages[page-1].select = true;
-                    var tmppages = pages;
-                    if (page > 2 && pages.length > 4)
-                        tmppages = pages.slice(page-3);
-                    if (tmppages.length > 5)
-                        tmppages = tmppages.slice(0, 5);
-                    if (pages.length > 4 && tmppages.length < 5)
-                        tmppages = pages.slice(-5);
-                    itemHtml = itemTemplate.render({"posts": arr[page-1], "pages": tmppages});
-                    $("#main").html(itemHtml);
-                },
-                tags: function() {
-                    var ts = {};
-                    var posts = data.posts;
-                    var tf = function() {
-                        for (var i = 0; i < posts.length; ++i) {
-                            var tmp = posts[i].tags.split(" ");
-                            for (var j = 0; j < tmp.length; ++j) {
-                                if (tmp[j].length == 0)
-                                    continue;
-                                if (!(tmp[j] in ts))
-                                    ts[tmp[j]] = 0;
-                                ts[tmp[j]]++;
-                            }
-                        }
-                    }
-                    tf();
-                    posts = data.pages;
-                    tf();
-                    var ans = [];
-                    for (var k in ts) {
-                        ans.push({"name": "#"+k, "size": 100+Math.sqrt(ts[k]-1)*30, "path": "#/tag/"+k});
-                    }
-                    var tagsTemplate = Hogan.compile($("#tagsTemplate").html());
-                    var tagsHtml = tagsTemplate.render({"tags": ans});
-                    $("#main").html(tagsHtml);
-                },
-                tag: function(param) {
-                    var tag = param.tag;
-                    var group = [{"name": "#"+tag}];
-                    var posts = [];
-                    for (var i = 0; i < data.posts.length; ++i) {
-                        var tmp = data.posts[i].tags.split(" ");
-                        if (tmp.indexOf(tag) != -1)
-                            posts.push(data.posts[i]);
-                    }
-                    for (var i = 0; i < data.pages.length; ++i) {
-                        var tmp = data.pages[i].tags.split(" ");
-                        if (tmp.indexOf(tag) != -1)
-                            posts.push(data.pages[i]);
-                    }
-                    group[0].posts = posts;
-                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
-                    var tmpHtml = tmpTemplate.render({"group": group});
-                    $("#main").html(tmpHtml);
-                },
-                archive: function() {
-                    var group = [];
-                    var posts = data.posts;
-                    var now = -1;
-                    var name = "";
-                    for (var i = 0; i < posts.length; ++i) {
-                        if (name != posts[i].date.slice(0,4)) {
-                            name = posts[i].date.slice(0,4);
-                            group.push({"name": name, "posts": []});
-                            now++;
-                        }
-                        group[now].posts.push(posts[i]);
-                    }
-                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
-                    var tmpHtml = tmpTemplate.render({"group": group});
-                    $("#main").html(tmpHtml);
-                }
-            });
-            new App();
-        },
-        error: function(e) {
-            console.log("init error");
-        }
-    });    
-});
-</script>
+</div>
+</div>
+<div class="alert alert-warning fade in">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+<strong>Welcome !</strong> 如果你好的意见或建议可在留言板处留言。
+</div>
+<table class="table table-bordered table-striped">
+ <thead>         
+<th>个人常用导航</th> 
+</thead>
+<tbody>
+<tr>
+<td><a href="http://notepad.cc/link0502">在线记事本</a></td>
+<td><a href="http://www.baidu.com/">baidu</a></td>
+<td><a href="https://github.com">Github</a></td>
+<td><a href="https://www.yinxiang.com/">Evernote</a></td>
+</tr>
+<tr>
+<td><a href="http://www.v2ex.com/">V2EX</a></td>
+<td><a href="http://douban.fm//">豆瓣FM</a></td>
+<td><a href="https://www.dnspod.cn">Dnspod</a></td>
+<td><a href="http://www.reddit.com/">Reddit</a></td>
+</tr>
+</tbody>
+</table>
+<!-- 1、工具导航:科学上网|善用佳软 -->
+
+<div><a style="text-decoration:none" name="工具导航"> </a></div>
+<h3  class="page-header"><a style="text-decoration:none" name="工具导航">1、工具导航<small>科学上网|善用佳软</small></a></h3>           
+<table class="table table-bordered table-striped">
+<tbody>
+<tr>
+<td><a href="http://naotu.baidu.com/edit.html">百度脑图</a></td>
+<td><a href="http://serve.netsh.org/pub/gethosts.php">在线获取</a></td>
+<td><a href="https://stackedit.io/editor">在线Mrakdown</a></td>
+<td><a href="http://www.free-pdftoword.com/">pdf转换成word</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/greatfire/wiki">Google镜像greatfire</a></td>
+<td><a href="http://www.yibizi.com/">在线手写</a></td>
+<td><a href="http://weixin.sogou.com/">微信搜索</a></td>
+<td><a href="http://www.baigoogledu.com/">百度Google一起搜</a></td>
+</tr>
+</tbody>
+</table>
+<!-- 2、网站建设:网站建设|DNS服务-->
+<div><a style="text-decoration:none" name="网站建设"> </a></div>
+<h3  class="page-header"><a style="text-decoration:none" name="网站建设">2、网站建设<small>网站建设|DNS服务</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="https://my.incapsula.com" >incapsula|CDN加速</a></td><!-- link0502.com@gmail.com gm.com-->				
+<td><a href="http://www.imooc.com/" >慕课网</a></td>
+<td><a href="http://updateyourfooter.com/" >update@Copyright</a></td>			
+<td><a href="http://gtmetrix.com/" >网站速度诊断</a></td>
+</tr>
+</thead>
+<thead>
+<tr>
+<td><a href="http://www.bootcss.com/" >Bootstrap</a></td>
+<td><a href="http://www.shejidaren.com/" >设计达人</a></td>
+<td><a href="http://www.qiniu.com/" >七牛云存储</a></td><!-- link0502.com@gmail.com gm.com-->							
+<td><a href="https://www.cloudflare.com/" >Cloudflare</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://codeo.cn/" >代码园</a></td>
+<td><a href="http://typecho.org/" >typecho博客程序</a></td>
+<td><a href="http://shenchaofei.cn/duoshuo-comment-box-css-custom/328.html" >多说使用教程</a></td>
+<td><a href="http://tox.ourstu.com/" >Tox开源社交系统</a></td>
+</tr>
+<tr>
+<td><a href="http://www.mywpku.com/" >Wordpess主题</a></td>
+<td><a href="http://www.atool.org/" >Web前端工具</a></td>
+<td><a href="http://www.w3cfuns.com/topic-64.html" >w3cfuns前端网</a></td>				
+<td><a href="http://www.spritecow.com/" >图像拼接技术</a></td>
+</tr>
+<tr>
+<td><a href="http://beiai.org/" >北爱网</a></td>
+<td><a href="http://www.ps123.net/photoshop/List/Allfont_cn.html" >PS字体下载</a></td>
+<td><a href="http://www.w3cfuns.com/topic-64.html" >w3cfuns前端网</a></td>				
+<td><a href="http://www.spritecow.com/" >图像拼接技术</a></td>
+</tr>
+</tbody>
+</table>
+<!-- 3、生活 -->
+<div><a style="text-decoration:none" name="生活"> </a></div>
+<h3  class="page-header"><a style="text-decoration:none" name="生活">3、生活<small>生活|学习|闲逛</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="http://cn.linkedin.com/" >Linkedin</a></td>
+<td><a href="http://cn.linkedin.com/" >Linkedin</a></td>
+<td><a href="http://www.puahome.com/" >坏男孩学院</a></td>
+<td><a href="http://cn.linkedin.com/" >Linkedin</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://lebo.baidu.com/album/5826746" >百度乐播-冬吴相对论</a></td>
+<td><a href="http://www.p6we.com/" >品色堂</a></td>
+<td><a href="http://jgzmz.com/" >极光字幕组</a></td>
+<td><a href="https://www.tumblr.com/" >轻博客Tumblr</a></td>
+</tr>
+</tbody>
+</table>
+<!-- 4、致命ID -->
+<h3  class="page-header"><a style="text-decoration:none" name="致命ID">4、致命ID<small>用户ID|搜搜关键字</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="http://23.99.105.238/"> felixonmars</a></td>
+<td><a href="http://cn.linkedin.com/pub/jingchao-hu/4b/753/a76?trk=pub-pbmap" >Jingchao Hu</a></td>
+<th><a href="http://mosir.org/" >mosir</a></th>
+<th><a href="http://xianbai.me/about/" >LearnShare</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>镜像</td>
+<td>MagNet、torrent、ed2k</td>
+<th><a href="http://www.haosou.com/" >caoliushequ</a></th>
+<th><a href="http://xianbai.me/about/" >LearnShare</a></th>
+</tr>
+<tr>
+<td>bind9</td>
+<td>BT Sync</td><!--BTLZ4A4UD3PEWKPLLWEOKH3W7OQJKFPLG-->	
+<th><a href="http://www.haosou.com/" >Twentytwelve bigfa</a></th>
+<th><a href="http://xianbai.me/about/" >u</a></th>
+</tr>
+</tbody>
+</table>
+<!-- 5、校内导航:校内常用站点导航-->	
+<div><a style="text-decoration:none" name="校内导航"> </a></div>
+<h3  class="page-header"><a style="text-decoration:none" name="校内导航">5、校内导航<small>校内常用站点导航</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="http://10.0.2.222/" >Cacti监控</a></td>
+<td><a href="http://10.0.1.100:8080/sam/" >Sam计费管理</a></td>
+<td><a href="http://www.eg1004.ruijie.com.cn/admin/login.aspx">锐捷报修服务</a></td>
+<td><a href="http://www.eg1004.ruijie.com.cn/admin/login.aspx">锐捷报修服务</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://lixian.home.com/" >Aria2 Web客户端离线下载</a></td>
+<td><a href="http://xiazai.home.com/index.php" >Kodexplorer下载空间</a></td>
+<td><a href="http://www.eg1004.ruijie.com.cn/admin/login.aspx">锐捷报修服务</a></td>
+<td><a href="http://www.eg1004.ruijie.com.cn/admin/login.aspx">锐捷报修服务</a></td>
+</tr>
+</tbody>
+</table>
+<!-- 6、资源共享 -->	
+<h3  class="page-header"><a style="text-decoration:none" name="资源共享">6、资源共享<small>去中心化研究</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="http://www.byhh.org/" >我爱P2P</a></td>
+<td><a href="http://yyste.com/" >人人P2P</td>
+<td><a href="http://hdwai.com/" >人人影视</a></td>
+<td><a href="http://www.ttmeiju.com/" >天天美剧</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://hdwai.com/" >影视下载</a></td>
+<td><a href="http://www.ed2000.com/" >ED2000资源共享</td>
+<td><a href="http://www.acfun.tv/" >Acfun</a></td>
+<td><a href="http://beiai.org/btsousuo.html/" >章鱼搜索</td>
+</tr>
+</tbody>
+</table>
+<!-- 7、技术博客-->	
+<h3  class="page-header"><a style="text-decoration:none" name="技术博客">7、技术博客<small>优秀博客|WEB前端</small></a></h3>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td><a href="http://www.bootskin.org/theme/blogs-magazines/193.html" >BootSkin</a></td>
+<td><a href="http://www.blogbar.cc/" >Blogbar</td>
+<td><a href="http://www.anotherhome.net/" >Google黑板报</a></td>
+<td><a href="http://fex.baidu.com/" >Baidu WEB前端FEX</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://paranimage.com/" >帕兰映像</a></td>
+<td><a href="http://yannisxu.me/post/reconnect-dropbox" >yannisxu</a></td>
+<td><a href="http://topgeek.org/" >Topgeek</a></td>
+<td><a href="http://callmet.zzgary.info/" >Callmet</td>
+</tr>
+<tr>
+<td><a href="http://www.tuicool.com/" >推酷</a></td>
+<td><a href="http://youquhome.com/3436/" >有趣网</a></td>
+<td><a href="http://updateyourfooter.com/" >update@Copyright</a></td>
+<td><a href=" http://livid.v2ex.com/" >livid</a></td>
+</tr>
+<tr>
+<td><a href="http://suta.im/" >Suta</a></td><!--《《更改指针-->
+<td><a href="https://github.com/Yixiaohan/codeparkshare" >Github学习资料</a></td>
+<td><a href="http://xiaolai.li/" >李笑来</a></td>
+<td><a href="https://www.tumblr.com" > Tumblr</td>
+</tr>
+<tr>
+<td><a href="http://www.farbox.com/" >Farbox主页</a></td>
+<td><a href="http://retric.farbox.com/" >Farbox作者</a></td>
+<td><a href="http://blog.farbox.com/" >Farbox博客</a></td>
+<td><a href="https://www.farbox.com/service/app/~slide" >Farbox幻灯片</a></td><!--《 更改指针 -->
+</tr>
+<tr>
+<td><a href="https://we.farbox.com/" >Farbox Q&A</a></td>
+<td><a href="http://senneszi.com/" >潘小木</a></td>
+<td><a href="http://colachan.com/" >可乐橙</a></td>
+<td><a href="http://www.inkrope.com/" >绳墨</a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.ivancai.me/" >ivancai</a></td>
+<td><a href="http://blog.netsh.org/" >netsh</a></td>
+<td><a href="http://www.667887.net/" >第十一颗行星</a></td>
+<td><a href="http://ssk.91txh.com/" >我的那些事</a></td>
+</tr>
+<td><a href="http://suming.in/" >Suming</a></td>
+<td><a href="http://finle.me/" >Finleme</a></td>
+<td><a href="http://justjavac.com/" >justjavac（迷渡）</a></td>
+<td><a href="http://izzs.net/" >izzs</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-dropdown.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-alert.js"></script>
 </body>
 </html>
