@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://weibo.com/link0502/"/>
-  <updated>2018-02-04T10:57:32.250Z</updated>
+  <updated>2018-02-04T14:15:49.275Z</updated>
   <id>http://weibo.com/link0502/</id>
   
   <author>
@@ -17,13 +17,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>博客名</title>
-    <link href="http://weibo.com/link0502/2018/02/04/%E5%8D%9A%E5%AE%A2%E5%90%8D/"/>
-    <id>http://weibo.com/link0502/2018/02/04/博客名/</id>
-    <published>2018-02-04T10:57:32.000Z</published>
-    <updated>2018-02-04T10:57:32.250Z</updated>
+    <title>Centos 7 安装aria2及web前端界面</title>
+    <link href="http://weibo.com/link0502/2017/12/11/Centos%207%20%E5%AE%89%E8%A3%85aria2%E5%8F%8Aweb%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2/"/>
+    <id>http://weibo.com/link0502/2017/12/11/Centos 7 安装aria2及web前端界面/</id>
+    <published>2017-12-10T16:00:00.000Z</published>
+    <updated>2018-02-04T14:15:49.275Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、安装Aria2</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install aria2</span><br></pre></td></tr></table></figure><p>2、生成配置文件并编辑</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/aria2/   <span class="comment">#创建目录</span></span><br><span class="line">vi /etc/aria2/aria2.conf   <span class="comment">#创建并编辑配置文件</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置加密的密钥</span></span><br><span class="line">rpc-secret=token</span><br><span class="line"><span class="comment">#允许rpc</span></span><br><span class="line"><span class="built_in">enable</span>-rpc=<span class="literal">true</span></span><br><span class="line"><span class="comment">#允许所有来源, web界面跨域权限需要</span></span><br><span class="line">rpc-allow-origin-all=<span class="literal">true</span></span><br><span class="line"><span class="comment">#允许外部访问，false的话只监听本地端口</span></span><br><span class="line">rpc-listen-all=<span class="literal">true</span></span><br><span class="line"><span class="comment">#RPC端口, 仅当默认端口被占用时修改</span></span><br><span class="line">rpc-listen-port=6800</span><br><span class="line"><span class="comment">#最大同时下载数(任务数), 路由建议值: 3</span></span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line"><span class="comment">#断点续传</span></span><br><span class="line"><span class="built_in">continue</span>=<span class="literal">true</span></span><br><span class="line"><span class="comment">#同服务器连接数</span></span><br><span class="line">max-connection-per-server=5</span><br><span class="line"><span class="comment">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span></span><br><span class="line">min-split-size=10M</span><br><span class="line"><span class="comment">#单文件最大线程数, 路由建议值: 5</span></span><br><span class="line">split=10</span><br><span class="line"><span class="comment">#下载速度限制</span></span><br><span class="line">max-overall-download-limit=0</span><br><span class="line"><span class="comment">#单文件速度限制</span></span><br><span class="line">max-download-limit=0</span><br><span class="line"><span class="comment">#上传速度限制</span></span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line"><span class="comment">#单文件速度限制</span></span><br><span class="line">max-upload-limit=0</span><br><span class="line"><span class="comment">#断开速度过慢的连接</span></span><br><span class="line"><span class="comment">#lowest-speed-limit=0</span></span><br><span class="line"><span class="comment">#验证用，需要1.16.1之后的release版本</span></span><br><span class="line"><span class="comment">#referer=*</span></span><br><span class="line"><span class="comment">#文件保存路径, 默认为当前启动位置</span></span><br><span class="line">dir=/root/downloads</span><br><span class="line"><span class="comment">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用</span></span><br><span class="line"><span class="comment">#disk-cache=0</span></span><br><span class="line"><span class="comment">#另一种Linux文件缓存方式</span></span><br><span class="line"><span class="comment">#enable-mmap=true</span></span><br><span class="line"><span class="comment">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span></span><br><span class="line">file-allocation=prealloc</span><br><span class="line">file-allocation=prealloc</span><br><span class="line"><span class="comment"># 禁用IPv6, 默认:false</span></span><br><span class="line"><span class="built_in">disable</span>-ipv6=<span class="literal">true</span></span><br></pre></td></tr></table></figure><p>附上我的配置文件供参考<a href="http://download.ewwe.net/src/images/aria2.zip" target="_blank" rel="noopener">aria2.zip</a></p><p>说明：1、默认情况下只需要更改第一项 rpc-secret=token 这个即可，将 token 改成自己设置的秘钥（相当于通信秘钥），后期安装web前端界面需要用。</p><p>2、参考链接：<a href="http://aria2c.com/usage.html" target="_blank" rel="noopener">Aria2 &amp; YAAW 使用说明</a></p><p>3、启动Aria2</p><p>先测试：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria2c --conf-path=/etc/aria2/aria2.conf</span><br></pre></td></tr></table></figure><p>如无错误后直接启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria2c --conf-path=/etc/aria2/aria2.conf -D</span><br></pre></td></tr></table></figure><p>4、安装yaaw前端控制界面</p><p>下载网页文件：<a href="https://github.com/binux/yaaw" target="_blank" rel="noopener">https://github.com/binux/yaaw</a></p><p>备用链接：<a href="http://download.ewwe.net/src/yaaw-master.zip" target="_blank" rel="noopener">http://download.ewwe.net/src/yaaw-master.zip</a></p><p>将网页文件放到web服务器目录下面，配置域名进行访问。推荐使用lnmp。</p><p>访问域名yaaw地址，点击右上角设置按钮进行设置。根据第三部填写的token和服务器IP，填写自己的rpc信息。</p><pre><code class="bash">http://token:自己设置的token@IP地址:6800/jsonrpc</code></pre><p>完工，大家可以看下我的Aria2 Web : <a href="http://down.ewwe.net/" target="_blank" rel="noopener">http://down.ewwe.net/</a></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、安装Aria2&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code
+      
     
     </summary>
     
@@ -31,19 +39,202 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://weibo.com/link0502/2018/02/04/hello-world/"/>
-    <id>http://weibo.com/link0502/2018/02/04/hello-world/</id>
-    <published>2018-02-04T10:44:18.265Z</published>
-    <updated>2018-02-04T13:05:36.475Z</updated>
+    <title>Centos 7 使用rsync进行网站远程备份</title>
+    <link href="http://weibo.com/link0502/2017/12/08/Centos%207%20%E4%BD%BF%E7%94%A8rsync%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E8%BF%9C%E7%A8%8B%E5%A4%87%E4%BB%BD/"/>
+    <id>http://weibo.com/link0502/2017/12/08/Centos 7 使用rsync进行网站远程备份/</id>
+    <published>2017-12-07T16:00:00.000Z</published>
+    <updated>2018-02-04T14:09:25.221Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a>hexo 安装</h2><p><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">使用Hexo+Github一步步搭建属于自己的博客</a></p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>两台服务器统一设置</p><p>启动rsync 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync --daemon</span><br></pre></td></tr></table></figure><p>设置开机启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/rc.local</span><br><span class="line">在rc.local里面加入/usr/bin/rsync --daemon，然后保存退出。</span><br></pre></td></tr></table></figure><p>服务端</p><p>1、设置密码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"test:test"</span> &gt; /etc/rsync.password</span><br></pre></td></tr></table></figure><p>2、设置可读权限</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 600 /etc/rsync.password</span><br></pre></td></tr></table></figure><p>3、配置文件 /etc/rsyncd.conf<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">uid = nobody  </span><br><span class="line">gid = nobody  </span><br><span class="line">use chroot = n0</span><br><span class="line">timeout = 600</span><br><span class="line">max connections = 10  </span><br><span class="line">pid file = /var/run/rsyncd.pid  </span><br><span class="line"><span class="built_in">log</span> file = /var/<span class="built_in">log</span>/rsyncd.log  </span><br><span class="line">[data]  </span><br><span class="line">path=/root/rsync/</span><br><span class="line">ignore errors  </span><br><span class="line"><span class="built_in">read</span> only = no  </span><br><span class="line">list = no  </span><br><span class="line">hosts allow = *</span><br><span class="line">auth users = root2017  </span><br><span class="line">secrets file = /etc/rsync.password</span><br><span class="line">说明：1、[data] 认证模块名、 path 同步目录  2、参考配置附件：rsyncd.rar</span><br></pre></td></tr></table></figure></p><p>客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"root2017密码"</span> &gt; /etc/rsync.password  </span><br><span class="line">chmod 600 /etc/rsync.password</span><br><span class="line">说明：1、客户端只需要密码，不需要用户名。</span><br></pre></td></tr></table></figure></p><p>拉取远程文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzP --password-file=/etc/rsync.password root2017@119.28.88.97::data /root/rsync/</span><br></pre></td></tr></table></figure><p>推送本地文件到远程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzP --password-file=/etc/rsync.password /root/rsync/ root2017@119.28.88.97::data</span><br></pre></td></tr></table></figure></p><p>显示进度<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -av --password-file=/etc/rsync.password root2017@119.28.88.97::data /root/rsync/ -b --progress</span><br></pre></td></tr></table></figure></p><p>1、错误提示：auth failed on module</p><p>解决办法：</p><p>检查服务是否启动，端口是否打开<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep rsync </span><br><span class="line">netstat -lnt| grep 873</span><br></pre></td></tr></table></figure></p><p>重新启动服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 27284 </span><br><span class="line">rsync --daemon --config=/etc/rsyncd.conf</span><br></pre></td></tr></table></figure></p><p>如提示错误先删除文件rm -rf /var/run/rsyncd.pid 再重新启动</p><p>2、错误提示：Permission denied </p><p>解决办法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown nobody.nobody /root/rsync/</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;hexo-安装&quot;&gt;&lt;a href=&quot;#hexo-安装&quot; class=&quot;headerlink&quot; title=&quot;hexo 安装&quot;&gt;&lt;/a&gt;hexo 安装&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/fengxiongZz/p/770
+        &lt;p&gt;两台服务器统一设置&lt;/p&gt;
+&lt;p&gt;启动rsync 服务&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7 网站及数据库七天循环备份（本地和远程）</title>
+    <link href="http://weibo.com/link0502/2017/12/06/Centos7%20%E7%BD%91%E7%AB%99%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%83%E5%A4%A9%E5%BE%AA%E7%8E%AF%E5%A4%87%E4%BB%BD%EF%BC%88%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%EF%BC%89/"/>
+    <id>http://weibo.com/link0502/2017/12/06/Centos7 网站及数据库七天循环备份（本地和远程）/</id>
+    <published>2017-12-05T16:00:00.000Z</published>
+    <updated>2018-02-04T15:15:19.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>本地备份原脚本：<a href="http://download.ewwe.net/src/images/backup.rar" target="_blank" rel="noopener">backup.rar</a></p><p>数据库备份：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./backup.sh db www.ewwe.net empire root root密码 /home/wwwbackup/  www.ewwe.net</span><br><span class="line">说明：1、备份目录：wwwbackup    2、备份数据库名：empire   3、备份后的文件名：www.ewwe.net</span><br></pre></td></tr></table></figure><p>网站文件备份：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./backup.sh file www.ewwe.net /home/wwwroot/www.ewwe.net /home/wwwbackup/www.ewwe.net</span><br></pre></td></tr></table></figure><p>说明：1、备份目录：wwwbackup    2、备份后的文件名：www.ewwe.net</p><p>整合脚本：<a href="http://download.ewwe.net/src/images/backup_one.rar" target="_blank" rel="noopener">整合一键备份脚本.rar</a>  直接运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./backup.sh</span><br><span class="line">2017-12-06_212940.png</span><br></pre></td></tr></table></figure><p>7天循环配置 添加 crontab 任务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#backup www.ewwe.net:</span></span><br><span class="line">0 3 * * * /root/download/backup0.sh db www.ewwe.net empire root root密码 /home/wwwbackup/  www.ewwe.net &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">5 3 * * * /root/download/backup0.sh file www.ewwe.net /home/wwwroot/www.ewwe.net /home/wwwbackup/www.ewwe.net &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">说明：1、crontab参数格式为 ｛分 时 日 月 周 + 命令行｝   2、第二行配置为每天3点备份</span><br></pre></td></tr></table></figure><p>七牛远程备份脚本：<a href="http://download.ewwe.net/src/images/qrsync.rar" target="_blank" rel="noopener">qrsync.rar</a></p><p>说明：1、设置要备份的本地路径   2、登录  <a href="https://portal.qiniu.com/user/key" target="_blank" rel="noopener">https://portal.qiniu.com/user/key</a>  修改qysync.cof中的AK、SK</p><p>添加 crontab 任务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 4 * * * /root/download/qrsync/qrsync /root/download/qrsync/qrsync.conf &gt;/dev/null 2&gt;&amp;1 &amp;</span><br><span class="line">提示：1、注意脚本路径写正确   2、腾讯云centos无法添加任务，可以尝试 crontab -e  进行添加</span><br></pre></td></tr></table></figure><p>参考链接：<a href="https://zhangge.net/4336.html" target="_blank" rel="noopener">https://zhangge.net/4336.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本地备份原脚本：&lt;a href=&quot;http://download.ewwe.net/src/images/backup.rar&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;backup.rar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;数据库备份：&lt;/p&gt;
+&lt;figure 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos 7 安装BBR实现网络加速</title>
+    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%E5%AE%89%E8%A3%85BBR%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
+    <id>http://weibo.com/link0502/2017/12/04/Centos 7安装BBR实现网络加速/</id>
+    <published>2017-12-03T16:00:00.000Z</published>
+    <updated>2018-02-04T14:05:47.463Z</updated>
+    
+    <content type="html"><![CDATA[<p>环境：操作系统:CentOS 7.2 64位</p><p>一、升级内核一键代码： </p><p>（不要跟我说什么技术分析，老夫都是一把梭）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org</span><br><span class="line">rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm</span><br><span class="line">yum --enablerepo=elrepo-kernel install kernel-ml -y</span><br><span class="line">rpm -qa | grep kernel</span><br><span class="line">rpm -ev </span><br><span class="line">egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \<span class="string">'</span></span><br><span class="line"><span class="string">grub2-set-default 0  # default 0 </span></span><br><span class="line"><span class="string">reboot</span></span><br></pre></td></tr></table></figure></p><p>二、开启BBR</p><p>开机后 uname -r 看看是不是内核 &gt;= 4.9</p><p>执行 lsmod | grep bbr，如果结果中没有 tcp_bbr 的话就先执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">modprobe tcp_bbr</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"tcp_bbr"</span> &gt;&gt; /etc/modules-load.d/modules.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"net.core.default_qdisc=fq"</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"net.ipv4.tcp_congestion_control=bbr"</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure></p><p>执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line">sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure></p><p>如果结果都有 bbr, 则证明你的内核已开启 bbr<br><img src="http://download.ewwe.net/src/images/10002.png" alt="GitHub"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;环境：操作系统:CentOS 7.2 64位&lt;/p&gt;
+&lt;p&gt;一、升级内核一键代码： &lt;/p&gt;
+&lt;p&gt;（不要跟我说什么技术分析，老夫都是一把梭）&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos 7 安全检查</title>
+    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%20%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/"/>
+    <id>http://weibo.com/link0502/2017/12/04/Centos 7 安全检查/</id>
+    <published>2017-12-03T16:00:00.000Z</published>
+    <updated>2018-02-04T14:05:02.083Z</updated>
+    
+    <content type="html"><![CDATA[<p>自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。</p><p>查询端口占用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep 138</span><br></pre></td></tr></table></figure></p><p>查看已连接进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep ESTABLISHED</span><br></pre></td></tr></table></figure><p>进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ps -ef # 查看所有进程</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># top # 实时显示进程状态(另一篇文章里面有详细的介绍)</span></span><br></pre></td></tr></table></figure></p><p>系统 日志文件（ 可以通过cat 或tail 命令来查看）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　/var/<span class="built_in">log</span>/message 系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/secure 与安全相关的日志信息</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/cron 与定时任务相关的日志信息</span><br></pre></td></tr></table></figure></p><p>网络<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ifconfig # 查看所有网络接口的属性</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># iptables -L # 查看防火墙设置</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># route -n # 查看路由表</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -lntp # 查看所有监听端口</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -antp # 查看所有已经建立的连接</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -s # 查看网络统计信息</span></span><br></pre></td></tr></table></figure></p><p>服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># chkconfig –list # 列出所有系统服务</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。&lt;/p&gt;
+&lt;p&gt;查询端口占用&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机最小化安装centos7 之二《kangle安装》</title>
+    <link href="http://weibo.com/link0502/2017/11/30/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%BA%8C%E3%80%8Akangle%E5%AE%89%E8%A3%85%E3%80%8B/"/>
+    <id>http://weibo.com/link0502/2017/11/30/虚拟机最小化安装centos7 之二《kangle安装》/</id>
+    <published>2017-11-29T16:00:00.000Z</published>
+    <updated>2018-02-04T13:59:02.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>前提条件：<br>    请先确保你的系统上有g++,libz开发包,libpcre开发包,libiconv开发包(非linux版要).如你的系统为centos/rhel则运行下面命令安装这些包:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget make automake gcc gcc-c++ pcre-devel zlib-devel sqlite-devel openssl-devel</span><br></pre></td></tr></table></figure><p>第一步 下载源代码:<br>下载后我们会得到kangle-x.y.z.tar.gz(x,y,z是版本号,以下命令请替换x,y,z为具体的版本号)<br>以2.8.3版本为例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.ewwe.net/src/kangle/kangle-3.4.8.tar.gz</span><br></pre></td></tr></table></figure></p><p>第二步，解压：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xzf kangle-*.tar.gz</span><br><span class="line"><span class="built_in">cd</span> kangle-*</span><br></pre></td></tr></table></figure></p><p>第三步，配置:这一步用来配置kangle源代码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/vhs/kangle --<span class="built_in">enable</span>-disk-cache --<span class="built_in">enable</span>-ipv6 --<span class="built_in">enable</span>-ssl --<span class="built_in">enable</span>-vh-limit</span><br></pre></td></tr></table></figure></p><p>第四步 编译安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p><p>第五步 启动kangle</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/vhs/kangle/bin/kangle</span><br></pre></td></tr></table></figure><p>第六步 进入kangle管理<br>通过浏览器打开 <a href="http://服务器ip地址:3311/" target="_blank" rel="noopener">http://服务器ip地址:3311/</a><br>第一次进入输入 用户名admin,密码kangle<br>强烈建议第一次进入后修改管理后台的用户名和密码</p><p>kangle参数：<br>下面的参数是添加在：<br>/vhs/kangle/bin/kangle 后面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[-h --<span class="built_in">help</span>]       可以看到详细的参数说明</span><br><span class="line">[-d level]         调试运行程序</span><br><span class="line">[-r --reload]     重新加载所有配置文件</span><br><span class="line">[--revh]           重新加载etc/vh.xml文件(etc/vh.xml)</span><br><span class="line">[--reboot]        平滑重起程序(原有程序会保证服务完客户），一般用来升级用的</span><br><span class="line">[-z [disk_dir]]   建立硬盘cache目录</span><br><span class="line">[-v --version]  查看程序版本</span><br><span class="line">[-a apache_config_file]  转换的Apache配置</span><br><span class="line">[-q]                 关闭程序</span><br><span class="line">[-n]            start program not <span class="keyword">in</span> daemon</span><br></pre></td></tr></table></figure></p><p>注意：如果发现网页服务访问，检查3311端口是否打开，请参考上一篇如何  开放指定端口3311。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前提条件：&lt;br&gt;    请先确保你的系统上有g++,libz开发包,libpcre开发包,libiconv开发包(非linux版要).如你的系统为centos/rhel则运行下面命令安装这些包:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;ta
+      
+    
+    </summary>
+    
+    
+      <category term="虚拟机，centos7" scheme="http://weibo.com/link0502/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8Ccentos7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机最小化安装centos7 之一《网络设置》</title>
+    <link href="http://weibo.com/link0502/2017/11/29/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%B8%80%E3%80%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E3%80%8B/"/>
+    <id>http://weibo.com/link0502/2017/11/29/虚拟机最小化安装centos7 之一《网络设置》/</id>
+    <published>2017-11-28T16:00:00.000Z</published>
+    <updated>2018-02-04T13:54:16.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>网上有很多教程，但是还是需要自己摸索的。</p><p>虚拟机环境：VMware Workstation </p><p>ISO镜像：CentOS-7-x86_64-Minimal-1708.iso</p><p>安装完好网络是不通的，需要进行虚拟机设置和Centos设置。</p><p>第一步：首先在虚拟网络编辑器里面，进行NAT设置（注意看下网关IP，一会Centos设置要用），然后将Centos的网络设置为NAT模式。</p><p>第二步：Centos设置，进入/etc/sysconfig/network-scripts/ 目录，查看ifcfg开头的两个文件，网上的教程大多写的是enp0s3，这个无所谓的。</p><p>本机的配置文件名字不一定是。下图是我的：</p><p><img src="http://download.ewwe.net/src/images/10001.png" alt="GitHub"></p><p>其中ifcfg-lo为本机Loopback地址，就是本机回环地址。我们需要修改的就是ifcfg-ens33地址。按如下修改：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BOOTPROTO=”static” <span class="comment">#dhcp改为static</span></span><br><span class="line">ONBOOT=”yes” <span class="comment">#开机启用本配置</span></span><br><span class="line">IPADDR=192.168.7.106 <span class="comment">#静态IP</span></span><br><span class="line">GATEWAY=192.168.7.1 <span class="comment">#默认网关</span></span><br><span class="line">NETMASK=255.255.255.0 <span class="comment">#子网掩码</span></span><br><span class="line">DNS1=192.168.7.1 <span class="comment">#DNS 配置</span></span><br></pre></td></tr></table></figure></p><p>然后重启网络： service network restart</p><p>我修改的文件，附件：<a href="http://download.ewwe.net/src/images/ifcfg-ens33.rar" target="_blank" rel="noopener">ifcfg-ens33.rar</a></p><p>开放指定端口例如 3311</p><p>1、使用netstat等命令需要 安装网络工具  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure><p>2、关闭CentOS7自带的防火墙 firewall 启用 IPtable </p><p>停止 Firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure></p><p>关闭firewall自动启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure></p><p>安装IPtables防火墙<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y iptables-services</span><br></pre></td></tr></table></figure></p><p>3、修改iptables配置文件，开放3311等端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure></p><p>#添加下面三句话到默认的22端口这条规则的下面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT </span><br><span class="line">-A INPUT -m state –state NEW -m tcp -p tcp –dport 3311 -j ACCEPT</span><br></pre></td></tr></table></figure></p><p>重启iptables<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iptables.service</span><br></pre></td></tr></table></figure></p><p>添加iptables开机自启项<br>~~~bash<br>        systemctl enable iptables.service</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;网上有很多教程，但是还是需要自己摸索的。&lt;/p&gt;
+&lt;p&gt;虚拟机环境：VMware Workstation &lt;/p&gt;
+&lt;p&gt;ISO镜像：CentOS-7-x86_64-Minimal-1708.iso&lt;/p&gt;
+&lt;p&gt;安装完好网络是不通的，需要进行虚拟机设置和Centos设置。
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>301跳转代码php实例</title>
+    <link href="http://weibo.com/link0502/2016/11/18/301%E8%B7%B3%E8%BD%AC%E4%BB%A3%E7%A0%81php%E5%AE%9E%E4%BE%8B/"/>
+    <id>http://weibo.com/link0502/2016/11/18/301跳转代码php实例/</id>
+    <published>2016-11-17T16:00:00.000Z</published>
+    <updated>2018-02-04T14:20:54.510Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line"><span class="variable">$the_host</span> = <span class="variable">$_SERVER</span>[<span class="string">'HTTP_HOST'</span>];//取得当前域名</span><br><span class="line"><span class="variable">$the_url</span> = isset(<span class="variable">$_SERVER</span>[<span class="string">'REQUEST_URI'</span>]) ? <span class="variable">$_SERVER</span>[<span class="string">'REQUEST_URI'</span>] : <span class="string">''</span>;//判断地址后面部分</span><br><span class="line"><span class="variable">$the_url</span> = strtolower(<span class="variable">$the_url</span>);//将英文字母转成小写</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$the_url</span>==<span class="string">"/index.php"</span>)//判断是不是首页</span><br><span class="line">&#123;</span><br><span class="line"><span class="variable">$the_url</span>=<span class="string">"/"</span>;//如果是首页，赋值为“/”</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$the_host</span> !== <span class="string">'www.lyfht.cn'</span>)//如果域名不是带www的网址那么进行下面的301跳转</span><br><span class="line">&#123;</span><br><span class="line">header(<span class="string">'HTTP/1.1 301 Moved Permanently'</span>);//发出301头部 </span><br><span class="line">header(<span class="string">'Location:http://www.lyfht.cn'</span>.<span class="variable">$the_url</span>);//跳转到带www的网址</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure><p>PHP代码下载：<a href="http://download.ewwe.net/src/images/301.rar" target="_blank" rel="noopener">301文件.rar</a></p><p>可以新建名为301的文件夹，然后将下载好的代码放到里面。然后将不带www的域名指向这个文件夹即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>301重定向Kangle设置</title>
+    <link href="http://weibo.com/link0502/2015/11/20/301%E9%87%8D%E5%AE%9A%E5%90%91Kangle%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://weibo.com/link0502/2015/11/20/301重定向Kangle设置/</id>
+    <published>2015-11-19T16:00:00.000Z</published>
+    <updated>2018-02-04T14:18:03.797Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://download.ewwe.net/src/images/10003.png" alt="GitHub"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://download.ewwe.net/src/images/10003.png&quot; alt=&quot;GitHub&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于本站</title>
+    <link href="http://weibo.com/link0502/2015/07/12/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/"/>
+    <id>http://weibo.com/link0502/2015/07/12/关于本站/</id>
+    <published>2015-07-11T16:00:00.000Z</published>
+    <updated>2018-02-04T15:24:20.645Z</updated>
+    
+    <content type="html"><![CDATA[<p>##关于本站</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">2014年04月07日 购买域名，一直闲置。</span><br><span class="line"></span><br><span class="line">2015年01月27日 申请开通万网的免费主机。并正式开始备案。 </span><br><span class="line"></span><br><span class="line">2015年04月06日 通过备案申请，获得备案/许可证编号，并开始正式着手建立此站。</span><br><span class="line"></span><br><span class="line">2015年07月12日 帝国CMS主题模板初稿完成，总算像个正规站点了。</span><br><span class="line"></span><br><span class="line">2017年10月23日 到期的博客主机迁移至腾讯云，并建立新站点 blog.ewwe.net （不久将和主站合并）。</span><br><span class="line"></span><br><span class="line">2017年12月19日 增加全文搜索。</span><br><span class="line"></span><br><span class="line">2018年02月04日 博客迁移至Hexo，专心内容写作。</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##关于本站&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;b
       
     
     </summary>
