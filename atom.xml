@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://weibo.com/link0502/"/>
-  <updated>2018-02-05T03:17:40.625Z</updated>
+  <updated>2018-02-05T03:30:59.165Z</updated>
   <id>http://weibo.com/link0502/</id>
   
   <author>
@@ -17,22 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>网站SEO优化 网站地图sitemap、主动推送</title>
-    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
-    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
-    <published>2017-12-12T16:00:00.000Z</published>
-    <updated>2018-02-05T03:17:40.625Z</updated>
+    <title>博客迁移完成</title>
+    <link href="http://weibo.com/link0502/2018/02/05/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%AE%8C%E6%88%90/"/>
+    <id>http://weibo.com/link0502/2018/02/05/博客迁移完成/</id>
+    <published>2018-02-05T03:21:46.000Z</published>
+    <updated>2018-02-05T03:30:59.165Z</updated>
     
-    <content type="html"><![CDATA[<p>1、</p><p>2、主动推送</p><p>加入百度官方主动推送js代码即可。（参考：百度链接提交）</p>]]></content>
+    <content type="html"><![CDATA[<p>昨天开始部署Hexo，之前有尝试过，一直没成功，这次总算成功了。把博客迁移至Hexo，静态博客省事很多，而且还是markdown编辑，非常符合我的要求，之前一直在折腾博客主题界面，这次迁移才发现，根本没有多少内容，一直流于表面。换成这个博客主题后，潜心写作、记录吧。 </p><p>文章使用普通编辑器就可以编辑，附件及图片使用<a href="http://manage.ewwe.net/" target="_blank" rel="noopener">Kodexplorer</a>省去了不少事，外链使用<a href="http://download.ewwe.net/" target="_blank" rel="noopener">http://download.ewwe.net/</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;1、&lt;/p&gt;
-&lt;p&gt;2、主动推送&lt;/p&gt;
-&lt;p&gt;加入百度官方主动推送js代码即可。（参考：百度链接提交）&lt;/p&gt;
-
+        &lt;p&gt;昨天开始部署Hexo，之前有尝试过，一直没成功，这次总算成功了。把博客迁移至Hexo，静态博客省事很多，而且还是markdown编辑，非常符合我的要求，之前一直在折腾博客主题界面，这次迁移才发现，根本没有多少内容，一直流于表面。换成这个博客主题后，潜心写作、记录吧。 &lt;/p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网站SEO优化 删除不想收录的域名</title>
+    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
+    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
+    <published>2017-12-12T16:00:00.000Z</published>
+    <updated>2018-02-05T03:16:12.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。</p><p>直接在百度站长平台提交闭站申请，连接地址：<a href="http://ziyuan.baidu.com/siteclose/index" target="_blank" rel="noopener">百度搜索资源平台-闭站保护</a></p><p>说明：1、虽然是闭站保护，但是提交后，会清除相关百度收录。2、实测效果：提交后，2天左右审核通过，即可清除相关收录记录。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。&lt;/p&gt;
+&lt;p&gt;直接在百度站长平台提交闭站申请，连接地址：&lt;a href=&quot;http://ziyuan.baidu.com/siteclose/index&quot; target=&quot;
       
     
     </summary>
@@ -63,20 +82,22 @@
   </entry>
   
   <entry>
-    <title>网站SEO优化 删除不想收录的域名</title>
-    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
-    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
+    <title>网站SEO优化 网站地图sitemap、主动推送</title>
+    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
+    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
     <published>2017-12-12T16:00:00.000Z</published>
-    <updated>2018-02-05T03:16:12.662Z</updated>
+    <updated>2018-02-05T03:17:40.625Z</updated>
     
-    <content type="html"><![CDATA[<p>很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。</p><p>直接在百度站长平台提交闭站申请，连接地址：<a href="http://ziyuan.baidu.com/siteclose/index" target="_blank" rel="noopener">百度搜索资源平台-闭站保护</a></p><p>说明：1、虽然是闭站保护，但是提交后，会清除相关百度收录。2、实测效果：提交后，2天左右审核通过，即可清除相关收录记录。</p>]]></content>
+    <content type="html"><![CDATA[<p>1、</p><p>2、主动推送</p><p>加入百度官方主动推送js代码即可。（参考：百度链接提交）</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。&lt;/p&gt;
-&lt;p&gt;直接在百度站长平台提交闭站申请，连接地址：&lt;a href=&quot;http://ziyuan.baidu.com/siteclose/index&quot; target=&quot;
+        &lt;p&gt;1、&lt;/p&gt;
+&lt;p&gt;2、主动推送&lt;/p&gt;
+&lt;p&gt;加入百度官方主动推送js代码即可。（参考：百度链接提交）&lt;/p&gt;
+
       
     
     </summary>
