@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://weibo.com/link0502/"/>
-  <updated>2018-02-04T14:15:49.275Z</updated>
+  <updated>2018-02-05T03:17:40.625Z</updated>
   <id>http://weibo.com/link0502/</id>
   
   <author>
@@ -15,6 +15,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站SEO优化 网站地图sitemap、主动推送</title>
+    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
+    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
+    <published>2017-12-12T16:00:00.000Z</published>
+    <updated>2018-02-05T03:17:40.625Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、</p><p>2、主动推送</p><p>加入百度官方主动推送js代码即可。（参考：百度链接提交）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、&lt;/p&gt;
+&lt;p&gt;2、主动推送&lt;/p&gt;
+&lt;p&gt;加入百度官方主动推送js代码即可。（参考：百度链接提交）&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lnmp中的nginx日志切割，可设置保存时间</title>
+    <link href="http://weibo.com/link0502/2017/12/13/Lnmp%E4%B8%AD%E7%9A%84nginx%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2%EF%BC%8C%E5%8F%AF%E8%AE%BE%E7%BD%AE%E4%BF%9D%E5%AD%98%E6%97%B6%E9%97%B4/"/>
+    <id>http://weibo.com/link0502/2017/12/13/Lnmp中的nginx日志切割，可设置保存时间/</id>
+    <published>2017-12-12T16:00:00.000Z</published>
+    <updated>2018-02-05T03:14:12.846Z</updated>
+    
+    <content type="html"><![CDATA[<p>切割脚本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs.zip" target="_blank" rel="noopener">cut_nginx_logs.zip</a></p><p>说明：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置nginx日志文件目录路径</span></span><br><span class="line">log_files_path=<span class="string">"/home/wwwlogs/"</span></span><br><span class="line"><span class="comment">#日志文件将会存放到/home/wwwlogs/年/月/日志文件名_年月日.log</span></span><br><span class="line">log_files_dir=<span class="variable">$&#123;log_files_path&#125;</span>$(date -d <span class="string">"yesterday"</span> +<span class="string">"%Y"</span>)/$(date -d <span class="string">"yesterday"</span> +<span class="string">"%m"</span>)</span><br><span class="line"><span class="comment">#设置要切割的日志的名字，如果日志目录下面的日志文件名为vpser.net.log，则填写vpser.net，每个日志名用空格分隔</span></span><br><span class="line">log_files_name=(access vpser licess)</span><br><span class="line"><span class="comment">#设置nginx文件的位置</span></span><br><span class="line">nginx_sbin=<span class="string">"/usr/local/nginx/sbin/nginx"</span></span><br><span class="line"><span class="comment">#设置日志保存的时间，天</span></span><br><span class="line">save_days=7</span><br></pre></td></tr></table></figure><p>修改版本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs_2.zip" target="_blank" rel="noopener">cut_nginx_logs（修改版）.zip</a></p><p>说明：修改版更改了日志保存路径及命名方式，方便后期的死链提交做分析。</p><p>设置计划</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#每天0点整开始切割脚本。</span></span><br><span class="line">0 0 * * * /root/lnmp/tools/cut_nginx_logs.sh</span><br></pre></td></tr></table></figure><p>说明：注意脚本路径</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;切割脚本：&lt;a href=&quot;http://download.ewwe.net/src/images/cut_nginx_logs.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cut_nginx_logs.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明：&lt;/p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网站SEO优化 删除不想收录的域名</title>
+    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
+    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
+    <published>2017-12-12T16:00:00.000Z</published>
+    <updated>2018-02-05T03:16:12.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。</p><p>直接在百度站长平台提交闭站申请，连接地址：<a href="http://ziyuan.baidu.com/siteclose/index" target="_blank" rel="noopener">百度搜索资源平台-闭站保护</a></p><p>说明：1、虽然是闭站保护，但是提交后，会清除相关百度收录。2、实测效果：提交后，2天左右审核通过，即可清除相关收录记录。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。&lt;/p&gt;
+&lt;p&gt;直接在百度站长平台提交闭站申请，连接地址：&lt;a href=&quot;http://ziyuan.baidu.com/siteclose/index&quot; target=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网站SEO优化 外链跳转、死链清除</title>
+    <link href="http://weibo.com/link0502/2017/12/12/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%A4%96%E9%93%BE%E8%B7%B3%E8%BD%AC%E3%80%81%E6%AD%BB%E9%93%BE%E6%B8%85%E9%99%A4/"/>
+    <id>http://weibo.com/link0502/2017/12/12/网站SEO优化 外链跳转、死链清除/</id>
+    <published>2017-12-11T16:00:00.000Z</published>
+    <updated>2018-02-05T03:08:57.006Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、外链跳转优化，减少网站跳出率。</p><p>1、下载跳转代码：<a href="http://download.ewwe.net/src/images/go.zip" target="_blank" rel="noopener">go.zip</a></p><p>2、将其放在网站根目录/go/index.php</p><p>3、然后在需要吧需要跳转的链接改成 <a href="http://www.ewwe.net/go/index.php?跳转链接" target="_blank" rel="noopener">http://www.ewwe.net/go/index.php?跳转链接</a>  即可。</p><p>例如：链接<a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p><p>改后：<a href="http://www.ewwe.net/go/index.php?https://www.baidu.com" target="_blank" rel="noopener">http://www.ewwe.net/go/index.php?https://www.baidu.com</a></p><p>参考链接：分享最近对网站外链跳转页面代码的一些改善</p><p>二、死链提交，删除无效404页面。</p><p>1、脚本下载：<a href="http://download.ewwe.net/src/images/deathlink.zip" target="_blank" rel="noopener">deathlink.zip</a></p><p>2、添加循环任务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 1 * * * /root/lnmp/tools/deathlink.sh &gt;/dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure><p>3、百度后台死链提交填写死链url。如下图：</p><p>说明：1、此步骤前提是进行过日志切割，参考《Lnmp中的nginx日志切割，可设置保存时间》<br><img src="http://download.ewwe.net/src/images/10004.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、外链跳转优化，减少网站跳出率。&lt;/p&gt;
+&lt;p&gt;1、下载跳转代码：&lt;a href=&quot;http://download.ewwe.net/src/images/go.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;go.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Centos 7 安装aria2及web前端界面</title>
