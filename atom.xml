@@ -38,6 +38,30 @@
   </entry>
   
   <entry>
+    <title>网站SEO优化 网站地图sitemap、主动推送</title>
+    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
+    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
+    <published>2017-12-12T16:00:00.000Z</published>
+    <updated>2018-02-05T03:17:40.625Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、</p><p>2、主动推送</p><p>加入百度官方主动推送js代码即可。（参考：百度链接提交）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、&lt;/p&gt;
+&lt;p&gt;2、主动推送&lt;/p&gt;
+&lt;p&gt;加入百度官方主动推送js代码即可。（参考：百度链接提交）&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>网站SEO优化 删除不想收录的域名</title>
     <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
     <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
@@ -74,30 +98,6 @@
       
         &lt;p&gt;切割脚本：&lt;a href=&quot;http://download.ewwe.net/src/images/cut_nginx_logs.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cut_nginx_logs.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;说明：&lt;/p
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>网站SEO优化 网站地图sitemap、主动推送</title>
-    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
-    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
-    <published>2017-12-12T16:00:00.000Z</published>
-    <updated>2018-02-05T03:17:40.625Z</updated>
-    
-    <content type="html"><![CDATA[<p>1、</p><p>2、主动推送</p><p>加入百度官方主动推送js代码即可。（参考：百度链接提交）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1、&lt;/p&gt;
-&lt;p&gt;2、主动推送&lt;/p&gt;
-&lt;p&gt;加入百度官方主动推送js代码即可。（参考：百度链接提交）&lt;/p&gt;
-
       
     
     </summary>
@@ -197,6 +197,28 @@
   </entry>
   
   <entry>
+    <title>Centos 7 安全检查</title>
+    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%20%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/"/>
+    <id>http://weibo.com/link0502/2017/12/04/Centos 7 安全检查/</id>
+    <published>2017-12-03T16:00:00.000Z</published>
+    <updated>2018-02-04T14:05:02.083Z</updated>
+    
+    <content type="html"><![CDATA[<p>自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。</p><p>查询端口占用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep 138</span><br></pre></td></tr></table></figure></p><p>查看已连接进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep ESTABLISHED</span><br></pre></td></tr></table></figure><p>进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ps -ef # 查看所有进程</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># top # 实时显示进程状态(另一篇文章里面有详细的介绍)</span></span><br></pre></td></tr></table></figure></p><p>系统 日志文件（ 可以通过cat 或tail 命令来查看）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　/var/<span class="built_in">log</span>/message 系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/secure 与安全相关的日志信息</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/cron 与定时任务相关的日志信息</span><br></pre></td></tr></table></figure></p><p>网络<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ifconfig # 查看所有网络接口的属性</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># iptables -L # 查看防火墙设置</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># route -n # 查看路由表</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -lntp # 查看所有监听端口</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -antp # 查看所有已经建立的连接</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -s # 查看网络统计信息</span></span><br></pre></td></tr></table></figure></p><p>服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># chkconfig –list # 列出所有系统服务</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。&lt;/p&gt;
+&lt;p&gt;查询端口占用&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Centos 7 安装BBR实现网络加速</title>
     <link href="http://weibo.com/link0502/2017/12/04/Centos%207%E5%AE%89%E8%A3%85BBR%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
     <id>http://weibo.com/link0502/2017/12/04/Centos 7安装BBR实现网络加速/</id>
@@ -212,28 +234,6 @@
         &lt;p&gt;环境：操作系统:CentOS 7.2 64位&lt;/p&gt;
 &lt;p&gt;一、升级内核一键代码： &lt;/p&gt;
 &lt;p&gt;（不要跟我说什么技术分析，老夫都是一把梭）&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Centos 7 安全检查</title>
-    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%20%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/"/>
-    <id>http://weibo.com/link0502/2017/12/04/Centos 7 安全检查/</id>
-    <published>2017-12-03T16:00:00.000Z</published>
-    <updated>2018-02-04T14:05:02.083Z</updated>
-    
-    <content type="html"><![CDATA[<p>自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。</p><p>查询端口占用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep 138</span><br></pre></td></tr></table></figure></p><p>查看已连接进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep ESTABLISHED</span><br></pre></td></tr></table></figure><p>进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ps -ef # 查看所有进程</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># top # 实时显示进程状态(另一篇文章里面有详细的介绍)</span></span><br></pre></td></tr></table></figure></p><p>系统 日志文件（ 可以通过cat 或tail 命令来查看）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　/var/<span class="built_in">log</span>/message 系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/secure 与安全相关的日志信息</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/cron 与定时任务相关的日志信息</span><br></pre></td></tr></table></figure></p><p>网络<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ifconfig # 查看所有网络接口的属性</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># iptables -L # 查看防火墙设置</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># route -n # 查看路由表</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -lntp # 查看所有监听端口</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -antp # 查看所有已经建立的连接</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -s # 查看网络统计信息</span></span><br></pre></td></tr></table></figure></p><p>服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># chkconfig –list # 列出所有系统服务</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务</span></span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。&lt;/p&gt;
-&lt;p&gt;查询端口占用&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=
       
     
     </summary>
@@ -325,6 +325,97 @@
       
         &lt;p&gt;##关于本站&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;b
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>明天就是母亲节了</title>
+    <link href="http://weibo.com/link0502/2011/05/07/%E6%98%8E%E5%A4%A9%E5%B0%B1%E6%98%AF%E6%AF%8D%E4%BA%B2%E8%8A%82%E4%BA%86/"/>
+    <id>http://weibo.com/link0502/2011/05/07/明天就是母亲节了/</id>
+    <published>2011-05-06T17:41:15.000Z</published>
+    <updated>2018-02-08T15:05:12.755Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道什么时候知道了，母亲节这个节日。后来每年这个时候都会回想一下我的母亲。我的母亲才艺挺多的，记得很小的时候，妈妈的同学不远千里到我家玩，她们几个聊起了妈妈。那是我才知道，妈妈以前在学校挺有才艺的，能唱能跳。可是由于我妈家的孩子很多，由于太穷，上完高中就辍学了！没有再继续念下去，只是偶尔看到妈妈漂亮的字体，才会想起，妈妈也是上过高中的。是啊，当没有成就时，所有的一切都黯然失色，那些优秀的附加价值也就无处显现了。所以从小到大我听到最多的是爸爸的辉煌战绩，而关于妈妈的却很少。每一次的生病，都少不了母亲的的担心与细心照顾，很难想象没有母亲的悉心呵护现在的我会是怎样。I love U,mum !我这一生别无所求，只希望我的家人一切安好，这样，我的所有努力都是值得的</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;不知道什么时候知道了，母亲节这个节日。后来每年这个时候都会回想一下我的母亲。我的母亲才艺挺多的，记得很小的时候，妈妈的同学不远千里到我家玩，她们几个聊起了妈妈。那是我才知道，妈妈以前在学校挺有才艺的，能唱能跳。可是由于我妈家的孩子很多，由于太穷，上完高中就辍学了！没有再继续
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对就是对 错就是错</title>
+    <link href="http://weibo.com/link0502/2009/12/13/%E6%88%91%E4%BB%AC%E6%89%80%E5%85%B3%E5%BF%83%E7%9A%84%E5%86%B3%E5%AE%9A%E4%BA%86%E6%88%91%E4%BB%AC%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%A0%B7%E5%AD%90/"/>
+    <id>http://weibo.com/link0502/2009/12/13/我们所关心的决定了我们未来的样子/</id>
+    <published>2009-12-13T06:38:00.000Z</published>
+    <updated>2018-02-08T15:04:18.798Z</updated>
+    
+    <content type="html"><![CDATA[<p>开阔自己的眼界，扩大自己的阅读面，我们所关心的不应局限在我们周围，找到自己的所需，Don’t waste time any more！</p><p>一直很相信一句话“一个人业余时间所作的事情决定了他的未来”，我们是否在为我们的未来做好准备，从你的业余时间看出。</p><p>业余时间不仅影响甚至决定了人的差别，实质上更是影响和决定了人的快乐的程度和长度。但愿我们都能处理好自己的业余时间，</p><p>把它真正变成生活里最大的亮点。</p><p>再也不想沉睡，再也不想懵懵懂懂的生活，我们的未来等着我们去创造</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;开阔自己的眼界，扩大自己的阅读面，我们所关心的不应局限在我们周围，找到自己的所需，Don’t waste time any more！&lt;/p&gt;
+&lt;p&gt;一直很相信一句话“一个人业余时间所作的事情决定了他的未来”，我们是否在为我们的未来做好准备，从你的业余时间看出。&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对就是对 错就是错</title>
+    <link href="http://weibo.com/link0502/2009/11/22/%E5%AF%B9%E5%B0%B1%E6%98%AF%E5%AF%B9%20%E9%94%99%E5%B0%B1%E6%98%AF%E9%94%99/"/>
+    <id>http://weibo.com/link0502/2009/11/22/对就是对 错就是错/</id>
+    <published>2009-11-21T21:57:00.000Z</published>
+    <updated>2018-02-08T15:02:58.553Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于 对于错，我不想再分辨，因为那已经显的不怎么重要了，我做自己的事情就好，关于对错，留给他人评论吧。</p><p>再也不会因为什么而偏袒，‘’错就是错，对就是对‘’，不会因为何人而产生变化，这也许就是我好久以来放不开的原因吧，</p><p>我在乎的太多，关心的太多，快忘记了自己最初的想法，此时此刻，我只想将此讲出，我不会再因什么去偏袒了，朋友亦是如此，</p><p>即使再好，也不能改变对于错的判断！ Thanks for you help，well， I have my own ideas！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;关于 对于错，我不想再分辨，因为那已经显的不怎么重要了，我做自己的事情就好，关于对错，留给他人评论吧。&lt;/p&gt;
+&lt;p&gt;再也不会因为什么而偏袒，‘’错就是错，对就是对‘’，不会因为何人而产生变化，这也许就是我好久以来放不开的原因吧，&lt;/p&gt;
+&lt;p&gt;我在乎的太多，关心的太多，快
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>静不下来 何时醒悟</title>
+    <link href="http://weibo.com/link0502/2009/11/16/%E9%9D%99%E4%B8%8D%E4%B8%8B%E6%9D%A5%20%E4%BD%95%E6%97%B6%E9%86%92%E6%82%9F/"/>
+    <id>http://weibo.com/link0502/2009/11/16/静不下来 何时醒悟/</id>
+    <published>2009-11-16T00:17:00.000Z</published>
+    <updated>2018-02-08T15:01:56.205Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>       我怕烦躁，安静不下来最让我恐慌，     这让我不知所措，找不到真实的自我...    在我宁静的时候总会不断的埋怨自己做错了那么多，无法言语的自责让我忘记了倾述，独自品尝着那份我自己带来的苦.....  从开始到现在我改变了多少，在一个人的时候发现自己还是原来的我，依然像个小孩活在自己的城堡，全然不知外面的世界改变了多少，依然固守着自己心中的那份执着.今天就写到这，写日志的时候让我很清醒，以后我会经常在这片天地诉说我的故事、、、、、、、、、、、</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;       我怕烦躁，安静不下来最让我恐慌，
+     这让我不知所措，找不到真实的自我...
+    在我宁静的时候总会不断的埋怨自己做错了那么多，无法言语的自责让我忘记了倾述，独自品尝着那份我自己带来的苦.....
+  从开始到现在我改变了多少，在一个
       
     
     </summary>
