@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://weibo.com/link0502/"/>
+  <link href="Email:10000#ewwe.net/"/>
   <updated>2018-02-05T03:30:59.000Z</updated>
-  <id>http://weibo.com/link0502/</id>
+  <id>Email:10000#ewwe.net/</id>
   
   <author>
     <name>Mr.Leng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>博客迁移完成</title>
-    <link href="http://weibo.com/link0502/2018/02/05/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%AE%8C%E6%88%90/"/>
-    <id>http://weibo.com/link0502/2018/02/05/博客迁移完成/</id>
+    <link href="Email:10000#ewwe.net/2018/02/05/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%AE%8C%E6%88%90/"/>
+    <id>Email:10000#ewwe.net/2018/02/05/博客迁移完成/</id>
     <published>2018-02-05T03:21:46.000Z</published>
     <updated>2018-02-05T03:30:59.000Z</updated>
     
@@ -38,20 +38,20 @@
   </entry>
   
   <entry>
-    <title>Lnmp中的nginx日志切割，可设置保存时间</title>
-    <link href="http://weibo.com/link0502/2017/12/13/Lnmp%E4%B8%AD%E7%9A%84nginx%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2%EF%BC%8C%E5%8F%AF%E8%AE%BE%E7%BD%AE%E4%BF%9D%E5%AD%98%E6%97%B6%E9%97%B4/"/>
-    <id>http://weibo.com/link0502/2017/12/13/Lnmp中的nginx日志切割，可设置保存时间/</id>
+    <title>网站SEO优化 删除不想收录的域名</title>
+    <link href="Email:10000#ewwe.net/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
+    <id>Email:10000#ewwe.net/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
     <published>2017-12-12T16:00:00.000Z</published>
-    <updated>2018-02-05T03:14:12.000Z</updated>
+    <updated>2018-02-05T03:16:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>切割脚本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs.zip" target="_blank" rel="noopener">cut_nginx_logs.zip</a></p><p>说明：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置nginx日志文件目录路径</span></span><br><span class="line">log_files_path=<span class="string">"/home/wwwlogs/"</span></span><br><span class="line"><span class="comment">#日志文件将会存放到/home/wwwlogs/年/月/日志文件名_年月日.log</span></span><br><span class="line">log_files_dir=<span class="variable">$&#123;log_files_path&#125;</span>$(date -d <span class="string">"yesterday"</span> +<span class="string">"%Y"</span>)/$(date -d <span class="string">"yesterday"</span> +<span class="string">"%m"</span>)</span><br><span class="line"><span class="comment">#设置要切割的日志的名字，如果日志目录下面的日志文件名为vpser.net.log，则填写vpser.net，每个日志名用空格分隔</span></span><br><span class="line">log_files_name=(access vpser licess)</span><br><span class="line"><span class="comment">#设置nginx文件的位置</span></span><br><span class="line">nginx_sbin=<span class="string">"/usr/local/nginx/sbin/nginx"</span></span><br><span class="line"><span class="comment">#设置日志保存的时间，天</span></span><br><span class="line">save_days=7</span><br></pre></td></tr></table></figure><p>修改版本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs_2.zip" target="_blank" rel="noopener">cut_nginx_logs（修改版）.zip</a></p><p>说明：修改版更改了日志保存路径及命名方式，方便后期的死链提交做分析。</p><p>设置计划</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#每天0点整开始切割脚本。</span></span><br><span class="line">0 0 * * * /root/lnmp/tools/cut_nginx_logs.sh</span><br></pre></td></tr></table></figure><p>说明：注意脚本路径</p>]]></content>
+    <content type="html"><![CDATA[<p>很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。</p><p>直接在百度站长平台提交闭站申请，连接地址：<a href="http://ziyuan.baidu.com/siteclose/index" target="_blank" rel="noopener">百度搜索资源平台-闭站保护</a></p><p>说明：1、虽然是闭站保护，但是提交后，会清除相关百度收录。2、实测效果：提交后，2天左右审核通过，即可清除相关收录记录。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;切割脚本：&lt;a href=&quot;http://download.ewwe.net/src/images/cut_nginx_logs.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cut_nginx_logs.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;说明：&lt;/p
+        &lt;p&gt;很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。&lt;/p&gt;
+&lt;p&gt;直接在百度站长平台提交闭站申请，连接地址：&lt;a href=&quot;http://ziyuan.baidu.com/siteclose/index&quot; target=&quot;
       
     
     </summary>
@@ -61,8 +61,8 @@
   
   <entry>
     <title>网站SEO优化 网站地图sitemap、主动推送</title>
-    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
-    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
+    <link href="Email:10000#ewwe.net/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9B%BEsitemap%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81/"/>
+    <id>Email:10000#ewwe.net/2017/12/13/网站SEO优化 网站地图sitemap、主动推送/</id>
     <published>2017-12-12T16:00:00.000Z</published>
     <updated>2018-02-05T03:17:40.000Z</updated>
     
@@ -84,20 +84,20 @@
   </entry>
   
   <entry>
-    <title>网站SEO优化 删除不想收录的域名</title>
-    <link href="http://weibo.com/link0502/2017/12/13/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%88%A0%E9%99%A4%E4%B8%8D%E6%83%B3%E6%94%B6%E5%BD%95%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
-    <id>http://weibo.com/link0502/2017/12/13/网站SEO优化 删除不想收录的域名/</id>
+    <title>Lnmp中的nginx日志切割，可设置保存时间</title>
+    <link href="Email:10000#ewwe.net/2017/12/13/Lnmp%E4%B8%AD%E7%9A%84nginx%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2%EF%BC%8C%E5%8F%AF%E8%AE%BE%E7%BD%AE%E4%BF%9D%E5%AD%98%E6%97%B6%E9%97%B4/"/>
+    <id>Email:10000#ewwe.net/2017/12/13/Lnmp中的nginx日志切割，可设置保存时间/</id>
     <published>2017-12-12T16:00:00.000Z</published>
-    <updated>2018-02-05T03:16:12.000Z</updated>
+    <updated>2018-02-05T03:14:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。</p><p>直接在百度站长平台提交闭站申请，连接地址：<a href="http://ziyuan.baidu.com/siteclose/index" target="_blank" rel="noopener">百度搜索资源平台-闭站保护</a></p><p>说明：1、虽然是闭站保护，但是提交后，会清除相关百度收录。2、实测效果：提交后，2天左右审核通过，即可清除相关收录记录。</p>]]></content>
+    <content type="html"><![CDATA[<p>切割脚本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs.zip" target="_blank" rel="noopener">cut_nginx_logs.zip</a></p><p>说明：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置nginx日志文件目录路径</span></span><br><span class="line">log_files_path=<span class="string">"/home/wwwlogs/"</span></span><br><span class="line"><span class="comment">#日志文件将会存放到/home/wwwlogs/年/月/日志文件名_年月日.log</span></span><br><span class="line">log_files_dir=<span class="variable">$&#123;log_files_path&#125;</span>$(date -d <span class="string">"yesterday"</span> +<span class="string">"%Y"</span>)/$(date -d <span class="string">"yesterday"</span> +<span class="string">"%m"</span>)</span><br><span class="line"><span class="comment">#设置要切割的日志的名字，如果日志目录下面的日志文件名为vpser.net.log，则填写vpser.net，每个日志名用空格分隔</span></span><br><span class="line">log_files_name=(access vpser licess)</span><br><span class="line"><span class="comment">#设置nginx文件的位置</span></span><br><span class="line">nginx_sbin=<span class="string">"/usr/local/nginx/sbin/nginx"</span></span><br><span class="line"><span class="comment">#设置日志保存的时间，天</span></span><br><span class="line">save_days=7</span><br></pre></td></tr></table></figure><p>修改版本：<a href="http://download.ewwe.net/src/images/cut_nginx_logs_2.zip" target="_blank" rel="noopener">cut_nginx_logs（修改版）.zip</a></p><p>说明：修改版更改了日志保存路径及命名方式，方便后期的死链提交做分析。</p><p>设置计划</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#每天0点整开始切割脚本。</span></span><br><span class="line">0 0 * * * /root/lnmp/tools/cut_nginx_logs.sh</span><br></pre></td></tr></table></figure><p>说明：注意脚本路径</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;很多时候自己买的域名之前有百度收录，而且是自己不想要的，或者删除不想被收录的子域名。可以使用此方法。&lt;/p&gt;
-&lt;p&gt;直接在百度站长平台提交闭站申请，连接地址：&lt;a href=&quot;http://ziyuan.baidu.com/siteclose/index&quot; target=&quot;
+        &lt;p&gt;切割脚本：&lt;a href=&quot;http://download.ewwe.net/src/images/cut_nginx_logs.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cut_nginx_logs.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明：&lt;/p
       
     
     </summary>
@@ -107,8 +107,8 @@
   
   <entry>
     <title>网站SEO优化 外链跳转、死链清除</title>
-    <link href="http://weibo.com/link0502/2017/12/12/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%A4%96%E9%93%BE%E8%B7%B3%E8%BD%AC%E3%80%81%E6%AD%BB%E9%93%BE%E6%B8%85%E9%99%A4/"/>
-    <id>http://weibo.com/link0502/2017/12/12/网站SEO优化 外链跳转、死链清除/</id>
+    <link href="Email:10000#ewwe.net/2017/12/12/%E7%BD%91%E7%AB%99SEO%E4%BC%98%E5%8C%96%20%E5%A4%96%E9%93%BE%E8%B7%B3%E8%BD%AC%E3%80%81%E6%AD%BB%E9%93%BE%E6%B8%85%E9%99%A4/"/>
+    <id>Email:10000#ewwe.net/2017/12/12/网站SEO优化 外链跳转、死链清除/</id>
     <published>2017-12-11T16:00:00.000Z</published>
     <updated>2018-02-08T14:40:44.000Z</updated>
     
@@ -130,8 +130,8 @@
   
   <entry>
     <title>Centos 7 安装aria2及web前端界面</title>
-    <link href="http://weibo.com/link0502/2017/12/11/Centos%207%20%E5%AE%89%E8%A3%85aria2%E5%8F%8Aweb%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2/"/>
-    <id>http://weibo.com/link0502/2017/12/11/Centos 7 安装aria2及web前端界面/</id>
+    <link href="Email:10000#ewwe.net/2017/12/11/Centos%207%20%E5%AE%89%E8%A3%85aria2%E5%8F%8Aweb%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2/"/>
+    <id>Email:10000#ewwe.net/2017/12/11/Centos 7 安装aria2及web前端界面/</id>
     <published>2017-12-10T16:00:00.000Z</published>
     <updated>2018-02-08T14:32:36.000Z</updated>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>Centos 7 使用rsync进行网站远程备份</title>
-    <link href="http://weibo.com/link0502/2017/12/08/Centos%207%20%E4%BD%BF%E7%94%A8rsync%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E8%BF%9C%E7%A8%8B%E5%A4%87%E4%BB%BD/"/>
-    <id>http://weibo.com/link0502/2017/12/08/Centos 7 使用rsync进行网站远程备份/</id>
+    <link href="Email:10000#ewwe.net/2017/12/08/Centos%207%20%E4%BD%BF%E7%94%A8rsync%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E8%BF%9C%E7%A8%8B%E5%A4%87%E4%BB%BD/"/>
+    <id>Email:10000#ewwe.net/2017/12/08/Centos 7 使用rsync进行网站远程备份/</id>
     <published>2017-12-07T16:00:00.000Z</published>
     <updated>2018-02-04T14:09:25.000Z</updated>
     
@@ -175,8 +175,8 @@
   
   <entry>
     <title>Centos7 网站及数据库七天循环备份（本地和远程）</title>
-    <link href="http://weibo.com/link0502/2017/12/06/Centos7%20%E7%BD%91%E7%AB%99%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%83%E5%A4%A9%E5%BE%AA%E7%8E%AF%E5%A4%87%E4%BB%BD%EF%BC%88%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%EF%BC%89/"/>
-    <id>http://weibo.com/link0502/2017/12/06/Centos7 网站及数据库七天循环备份（本地和远程）/</id>
+    <link href="Email:10000#ewwe.net/2017/12/06/Centos7%20%E7%BD%91%E7%AB%99%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%83%E5%A4%A9%E5%BE%AA%E7%8E%AF%E5%A4%87%E4%BB%BD%EF%BC%88%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%EF%BC%89/"/>
+    <id>Email:10000#ewwe.net/2017/12/06/Centos7 网站及数据库七天循环备份（本地和远程）/</id>
     <published>2017-12-05T16:00:00.000Z</published>
     <updated>2018-02-09T13:05:03.000Z</updated>
     
@@ -197,31 +197,9 @@
   </entry>
   
   <entry>
-    <title>Centos 7 安全检查</title>
-    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%20%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/"/>
-    <id>http://weibo.com/link0502/2017/12/04/Centos 7 安全检查/</id>
-    <published>2017-12-03T16:00:00.000Z</published>
-    <updated>2018-02-04T14:05:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。</p><p>查询端口占用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep 138</span><br></pre></td></tr></table></figure></p><p>查看已连接进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep ESTABLISHED</span><br></pre></td></tr></table></figure><p>进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ps -ef # 查看所有进程</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># top # 实时显示进程状态(另一篇文章里面有详细的介绍)</span></span><br></pre></td></tr></table></figure></p><p>系统 日志文件（ 可以通过cat 或tail 命令来查看）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　/var/<span class="built_in">log</span>/message 系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/secure 与安全相关的日志信息</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/cron 与定时任务相关的日志信息</span><br></pre></td></tr></table></figure></p><p>网络<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ifconfig # 查看所有网络接口的属性</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># iptables -L # 查看防火墙设置</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># route -n # 查看路由表</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -lntp # 查看所有监听端口</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -antp # 查看所有已经建立的连接</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -s # 查看网络统计信息</span></span><br></pre></td></tr></table></figure></p><p>服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># chkconfig –list # 列出所有系统服务</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务</span></span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。&lt;/p&gt;
-&lt;p&gt;查询端口占用&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Centos 7 安装BBR实现网络加速</title>
-    <link href="http://weibo.com/link0502/2017/12/04/Centos%207%E5%AE%89%E8%A3%85BBR%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
-    <id>http://weibo.com/link0502/2017/12/04/Centos 7安装BBR实现网络加速/</id>
+    <link href="Email:10000#ewwe.net/2017/12/04/Centos%207%E5%AE%89%E8%A3%85BBR%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
+    <id>Email:10000#ewwe.net/2017/12/04/Centos 7安装BBR实现网络加速/</id>
     <published>2017-12-03T16:00:00.000Z</published>
     <updated>2018-02-08T14:58:10.000Z</updated>
     
@@ -242,9 +220,31 @@
   </entry>
   
   <entry>
+    <title>Centos 7 安全检查</title>
+    <link href="Email:10000#ewwe.net/2017/12/04/Centos%207%20%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/"/>
+    <id>Email:10000#ewwe.net/2017/12/04/Centos 7 安全检查/</id>
+    <published>2017-12-03T16:00:00.000Z</published>
+    <updated>2018-02-04T14:05:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。</p><p>查询端口占用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep 138</span><br></pre></td></tr></table></figure></p><p>查看已连接进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |grep ESTABLISHED</span><br></pre></td></tr></table></figure><p>进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ps -ef # 查看所有进程</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># top # 实时显示进程状态(另一篇文章里面有详细的介绍)</span></span><br></pre></td></tr></table></figure></p><p>系统 日志文件（ 可以通过cat 或tail 命令来查看）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　/var/<span class="built_in">log</span>/message 系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/secure 与安全相关的日志信息</span><br><span class="line"></span><br><span class="line">　　/var/<span class="built_in">log</span>/cron 与定时任务相关的日志信息</span><br></pre></td></tr></table></figure></p><p>网络<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># ifconfig # 查看所有网络接口的属性</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># iptables -L # 查看防火墙设置</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># route -n # 查看路由表</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -lntp # 查看所有监听端口</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -antp # 查看所有已经建立的连接</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># netstat -s # 查看网络统计信息</span></span><br></pre></td></tr></table></figure></p><p>服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="comment"># chkconfig –list # 列出所有系统服务</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;自己基础不牢，功夫不扎实。网上Down了很多一键脚本，用下面的命令简单检查一下吧。&lt;/p&gt;
+&lt;p&gt;查询端口占用&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>虚拟机最小化安装centos7 之二《kangle安装》</title>
-    <link href="http://weibo.com/link0502/2017/11/30/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%BA%8C%E3%80%8Akangle%E5%AE%89%E8%A3%85%E3%80%8B/"/>
-    <id>http://weibo.com/link0502/2017/11/30/虚拟机最小化安装centos7 之二《kangle安装》/</id>
+    <link href="Email:10000#ewwe.net/2017/11/30/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%BA%8C%E3%80%8Akangle%E5%AE%89%E8%A3%85%E3%80%8B/"/>
+    <id>Email:10000#ewwe.net/2017/11/30/虚拟机最小化安装centos7 之二《kangle安装》/</id>
     <published>2017-11-29T16:00:00.000Z</published>
     <updated>2018-02-04T13:59:02.000Z</updated>
     
@@ -261,14 +261,14 @@
     </summary>
     
     
-      <category term="虚拟机，centos7" scheme="http://weibo.com/link0502/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8Ccentos7/"/>
+      <category term="虚拟机，centos7" scheme="Email:10000#ewwe.net/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8Ccentos7/"/>
     
   </entry>
   
   <entry>
     <title>虚拟机最小化安装centos7 之一《网络设置》</title>
-    <link href="http://weibo.com/link0502/2017/11/29/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%B8%80%E3%80%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E3%80%8B/"/>
-    <id>http://weibo.com/link0502/2017/11/29/虚拟机最小化安装centos7 之一《网络设置》/</id>
+    <link href="Email:10000#ewwe.net/2017/11/29/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85centos7%20%E4%B9%8B%E4%B8%80%E3%80%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E3%80%8B/"/>
+    <id>Email:10000#ewwe.net/2017/11/29/虚拟机最小化安装centos7 之一《网络设置》/</id>
     <published>2017-11-28T16:00:00.000Z</published>
     <updated>2018-02-08T14:26:37.000Z</updated>
     
@@ -291,8 +291,8 @@
   
   <entry>
     <title>301跳转代码php实例</title>
-    <link href="http://weibo.com/link0502/2016/11/18/301%E8%B7%B3%E8%BD%AC%E4%BB%A3%E7%A0%81php%E5%AE%9E%E4%BE%8B/"/>
-    <id>http://weibo.com/link0502/2016/11/18/301跳转代码php实例/</id>
+    <link href="Email:10000#ewwe.net/2016/11/18/301%E8%B7%B3%E8%BD%AC%E4%BB%A3%E7%A0%81php%E5%AE%9E%E4%BE%8B/"/>
+    <id>Email:10000#ewwe.net/2016/11/18/301跳转代码php实例/</id>
     <published>2016-11-17T16:00:00.000Z</published>
     <updated>2018-02-08T14:23:46.000Z</updated>
     
@@ -312,8 +312,8 @@
   
   <entry>
     <title>关于本站</title>
-    <link href="http://weibo.com/link0502/2015/07/12/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/"/>
-    <id>http://weibo.com/link0502/2015/07/12/关于本站/</id>
+    <link href="Email:10000#ewwe.net/2015/07/12/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/"/>
+    <id>Email:10000#ewwe.net/2015/07/12/关于本站/</id>
     <published>2015-07-11T16:00:00.000Z</published>
     <updated>2018-02-04T15:24:20.000Z</updated>
     
@@ -334,8 +334,8 @@
   
   <entry>
     <title>明天就是母亲节了</title>
-    <link href="http://weibo.com/link0502/2011/05/07/%E6%98%8E%E5%A4%A9%E5%B0%B1%E6%98%AF%E6%AF%8D%E4%BA%B2%E8%8A%82%E4%BA%86/"/>
-    <id>http://weibo.com/link0502/2011/05/07/明天就是母亲节了/</id>
+    <link href="Email:10000#ewwe.net/2011/05/07/%E6%98%8E%E5%A4%A9%E5%B0%B1%E6%98%AF%E6%AF%8D%E4%BA%B2%E8%8A%82%E4%BA%86/"/>
+    <id>Email:10000#ewwe.net/2011/05/07/明天就是母亲节了/</id>
     <published>2011-05-06T17:41:15.000Z</published>
     <updated>2018-02-08T15:05:12.000Z</updated>
     
@@ -355,8 +355,8 @@
   
   <entry>
     <title>我们所关心的决定了我们未来的样子</title>
-    <link href="http://weibo.com/link0502/2009/12/13/%E6%88%91%E4%BB%AC%E6%89%80%E5%85%B3%E5%BF%83%E7%9A%84%E5%86%B3%E5%AE%9A%E4%BA%86%E6%88%91%E4%BB%AC%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%A0%B7%E5%AD%90/"/>
-    <id>http://weibo.com/link0502/2009/12/13/我们所关心的决定了我们未来的样子/</id>
+    <link href="Email:10000#ewwe.net/2009/12/13/%E6%88%91%E4%BB%AC%E6%89%80%E5%85%B3%E5%BF%83%E7%9A%84%E5%86%B3%E5%AE%9A%E4%BA%86%E6%88%91%E4%BB%AC%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%A0%B7%E5%AD%90/"/>
+    <id>Email:10000#ewwe.net/2009/12/13/我们所关心的决定了我们未来的样子/</id>
     <published>2009-12-13T06:38:00.000Z</published>
     <updated>2018-02-08T15:07:32.000Z</updated>
     
@@ -378,8 +378,8 @@
   
   <entry>
     <title>对就是对 错就是错</title>
-    <link href="http://weibo.com/link0502/2009/11/22/%E5%AF%B9%E5%B0%B1%E6%98%AF%E5%AF%B9%20%E9%94%99%E5%B0%B1%E6%98%AF%E9%94%99/"/>
-    <id>http://weibo.com/link0502/2009/11/22/对就是对 错就是错/</id>
+    <link href="Email:10000#ewwe.net/2009/11/22/%E5%AF%B9%E5%B0%B1%E6%98%AF%E5%AF%B9%20%E9%94%99%E5%B0%B1%E6%98%AF%E9%94%99/"/>
+    <id>Email:10000#ewwe.net/2009/11/22/对就是对 错就是错/</id>
     <published>2009-11-21T21:57:00.000Z</published>
     <updated>2018-02-08T15:02:58.000Z</updated>
     
@@ -401,8 +401,8 @@
   
   <entry>
     <title>静不下来 何时醒悟</title>
-    <link href="http://weibo.com/link0502/2009/11/16/%E9%9D%99%E4%B8%8D%E4%B8%8B%E6%9D%A5%20%E4%BD%95%E6%97%B6%E9%86%92%E6%82%9F/"/>
-    <id>http://weibo.com/link0502/2009/11/16/静不下来 何时醒悟/</id>
+    <link href="Email:10000#ewwe.net/2009/11/16/%E9%9D%99%E4%B8%8D%E4%B8%8B%E6%9D%A5%20%E4%BD%95%E6%97%B6%E9%86%92%E6%82%9F/"/>
+    <id>Email:10000#ewwe.net/2009/11/16/静不下来 何时醒悟/</id>
     <published>2009-11-16T00:17:00.000Z</published>
     <updated>2018-02-08T15:01:56.000Z</updated>
     
