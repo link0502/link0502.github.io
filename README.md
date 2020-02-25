@@ -2,4 +2,4 @@
 
 ##图床文件##
 
-https://cdn.jsdelivr.net/gh/link0502/link0502.github.io@master/index.html
+https://cdn.jsdelivr.net/gh/link0502/link0502.github.io@master/images/001.png
