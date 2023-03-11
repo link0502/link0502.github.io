@@ -1,0 +1,10 @@
+﻿/*!
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2017  冷月城, Inc.
+ * power by www.ewwwe.net
+ *//*用于bootstrap自定义样式 */
+.table_tr_1{                 /*背景条纹处理,基于CSS3的nth-child选择器实现，这里选择的是奇数行*/
+ background-color:#C0D1F1!important;
+}
+.height_1{ height: 60px;}
+.height_600{ margin-top: 600px;}
