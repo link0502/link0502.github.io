@@ -1,7 +1,7 @@
-##个人博客##
+##个人导航##
 
-##图床文件##
+##知识存储##
 
 #用github+jsdelivr搭建免费的cdn
 
-https://cdn.jsdelivr.net/gh/link0502/link0502.github.io@master/images/001.png
+https://cdn.jsdelivr.net/gh/link0502/link0502.github.io@master/css/style.css
