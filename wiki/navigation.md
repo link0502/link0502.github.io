@@ -1,16 +1,6 @@
-# 记录
+# 英语启蒙记录
 
 [首页](index.md)
 
-[Docs]()
+[使用文档](quickstart.md)
 
-- [Quickstart](quickstart.md)
-- [Layout](layout.md)
-- [FAQ](faq.md)
-
----
-
-- # Advanced
-- [Customizing](customizing.md)
-
-[英语启蒙](baby.md)
