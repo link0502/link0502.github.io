@@ -1,6 +1,6 @@
 # 记录
 
-[About](index.md)
+[首页](index.md)
 
 [Docs]()
 
@@ -14,9 +14,3 @@
 - [Customizing](customizing.md)
 
 [英语启蒙](baby.md)
-
-
-
-[gimmick:theme (inverse: false)](spacelab)
-
-[gimmick:ThemeChooser](Change theme)
