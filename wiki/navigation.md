@@ -13,9 +13,9 @@
 - # Advanced
 - [Customizing](customizing.md)
 
-[Gimmicks](gimmicks.md)
+[英语启蒙](baby.md)
 
-[Download](download.md)
+
 
 [gimmick:theme (inverse: false)](spacelab)
 
