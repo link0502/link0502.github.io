@@ -26,7 +26,7 @@
 绘本故事磨耳朵
 
 - 英文绘本
-- Red Rocket Readers 红色火箭  https://flyingstartbooks.com/red-rocket/ebooks/
+- [Red Rocket Readers 红色火箭](https://flyingstartbooks.com/red-rocket/ebooks/)
 - RAZ分级阅读
 - 海尼曼
 - 鹅妈妈童谣
@@ -42,7 +42,19 @@
 
 注意
 
+## 廖彩杏
 
+《用有声书轻松听出英语力》
+
+书单目录
+![](https://www.ewwe.net/wiki/images/1.png)
+![](https://www.ewwe.net/wiki/images/2.png)
+![](https://www.ewwe.net/wiki/images/3.png)
+![](https://www.ewwe.net/wiki/images/4.png)
+![](https://www.ewwe.net/wiki/images/5.png)
+![](https://www.ewwe.net/wiki/images/6.png)
+![](https://www.ewwe.net/wiki/images/7.png)
+![](https://www.ewwe.net/wiki/images/8.png)
 
 
 

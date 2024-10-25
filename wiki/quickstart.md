@@ -152,7 +152,6 @@ To use an image as a link, use the following syntax:
     Example:
     [![A kitten](http://placekitten.com/g/400/400)](http://www.placekitten.com)
 
-[![A kitten](http://placekitten.com/g/400/400)](http://www.placekitten.com)
 
 - - - -
 
