@@ -46,16 +46,20 @@
 
 《用有声书轻松听出英语力》
 
-书单目录
+###书单目录
+
+
 ![](https://www.ewwe.net/wiki/images/1.png)
 ![](https://www.ewwe.net/wiki/images/2.png)
 ![](https://www.ewwe.net/wiki/images/3.png)
 ![](https://www.ewwe.net/wiki/images/4.png)
 
 ![](https://www.ewwe.net/wiki/images/5.png)
-![](https://www.ewwe.net/wiki/images/6.png)
-![](https://www.ewwe.net/wiki/images/7.png)
-![](https://www.ewwe.net/wiki/images/8.png)
+![](https://www.ewwe.net/wiki/images/6.png)![](https://www.ewwe.net/wiki/images/7.png)![](https://www.ewwe.net/wiki/images/8.png)
+
+###原则
+
+“四不一没有”原则，即：不必先认单字、不必先学音标、不必先学文法、不必中文翻译，没有抽问考试。
 
 
 
