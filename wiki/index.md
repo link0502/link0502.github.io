@@ -50,6 +50,10 @@ Super Simple Songs
 
 《用有声书轻松听出英语力》
 
+![image-20241028121244423](F:\Users\link0\AppData\Roaming\Typora\typora-user-images\image-20241028121244423.png)
+
+
+
 ###书单目录
 
 ------
