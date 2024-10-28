@@ -30,7 +30,6 @@
 ------
 
 <img src="https://www.ewwe.net/wiki/images/image-20241028121512959.png" alt="image-20241028121512959" style="zoom:25%;" />
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028121528138.png" alt="image-20241028121528138" style="zoom:25%;" />
 
 - 英文绘本
@@ -48,7 +47,6 @@ Super Simple Songs
 10首基础旋律SSS儿歌，TPR指令儿歌。
 
 <img src="https://www.ewwe.net/wiki/images/image-20241028122102428.png" alt="image-20241028122102428" style="zoom: 25%;" />
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028122117124.png" alt="image-20241028122117124" style="zoom: 25%;" />
 
 
@@ -56,19 +54,9 @@ Super Simple Songs
 ------
 
 <img src="https://www.ewwe.net/wiki/images/image-20241028122141692.png" alt="image-20241028122141692" style="zoom: 25%;" />
-
-
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028122150663.png" alt="image-20241028122150663" style="zoom: 25%;" />
-
-
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028122203779.png" alt="image-20241028122203779" style="zoom: 25%;" />
-
-
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028122218702.png" alt="image-20241028122218702" style="zoom: 25%;" />
-
 <img src="https://www.ewwe.net/wiki/images/image-20241028122239310.png" alt="image-20241028122239310" style="zoom: 25%;" />
 
 
