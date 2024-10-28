@@ -25,6 +25,14 @@
 
 绘本故事磨耳朵
 
+### 分级阅读
+
+------
+
+![image-20241028121512959](G:\Github\link0502.github.io\wiki\images\image-20241028121512959.png)
+
+![image-20241028121528138](G:\Github\link0502.github.io\wiki\images\image-20241028121528138.png)
+
 - 英文绘本
 - [Red Rocket Readers 红色火箭](https://flyingstartbooks.com/red-rocket/ebooks/)
 - RAZ分级阅读
@@ -39,6 +47,34 @@ Super Simple Songs
 
 10首基础旋律SSS儿歌，TPR指令儿歌。
 
+![image-20241028122102428](G:\Github\link0502.github.io\wiki\images\image-20241028122102428.png)
+
+![image-20241028122117124](G:\Github\link0502.github.io\wiki\images\image-20241028122117124.png)
+
+
+
+------
+
+![image-20241028122141692](G:\Github\link0502.github.io\wiki\images\image-20241028122141692.png)
+
+
+
+![image-20241028122150663](G:\Github\link0502.github.io\wiki\images\image-20241028122150663.png)
+
+
+
+![image-20241028122203779](G:\Github\link0502.github.io\wiki\images\image-20241028122203779.png)
+
+
+
+![image-20241028122218702](G:\Github\link0502.github.io\wiki\images\image-20241028122218702.png)
+
+![image-20241028122239310](G:\Github\link0502.github.io\wiki\images\image-20241028122239310.png)
+
+
+
+
+
 
 ## 磨耳朵
 
@@ -48,9 +84,7 @@ Super Simple Songs
 
 ## 廖彩杏
 
-《用有声书轻松听出英语力》
-
-![image-20241028121244423](F:\Users\link0\AppData\Roaming\Typora\typora-user-images\image-20241028121244423.png)
+《用有声书轻松听出英语力》![image-20241028121244423](G:\Github\link0502.github.io\wiki\images\image-20241028121244423.png)
 
 
 
