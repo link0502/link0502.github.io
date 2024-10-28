@@ -49,13 +49,13 @@ Super Simple Songs
 
 ![image-20241028122102428](https://www.ewwe.net/wiki/images\image-20241028122102428.png)
 
-![image-20241028122117124](https://www.ewwe.net/wiki/imagesimage-20241028122117124.png)
+![image-20241028122117124](https://www.ewwe.net/wiki/images\image-20241028122117124.png)
 
 
 
 ------
 
-![image-20241028122141692](https://www.ewwe.net/wiki/imagesimage-20241028122141692.png)
+![image-20241028122141692](https://www.ewwe.net/wiki/images\image-20241028122141692.png)
 
 
 
@@ -63,13 +63,13 @@ Super Simple Songs
 
 
 
-![image-20241028122203779](https://www.ewwe.net/wiki/imagesimage-20241028122203779.png)
+![image-20241028122203779](https://www.ewwe.net/wiki/images\image-20241028122203779.png)
 
 
 
-![image-20241028122218702](https://www.ewwe.net/wiki/imagesimage-20241028122218702.png)
+![image-20241028122218702](https://www.ewwe.net/wiki/images\image-20241028122218702.png)
 
-![image-20241028122239310](https://www.ewwe.net/wiki/imagesimage-20241028122239310.png)
+![image-20241028122239310](https://www.ewwe.net/wiki/images\image-20241028122239310.png)
 
 
 
