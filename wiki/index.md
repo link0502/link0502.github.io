@@ -47,29 +47,29 @@ Super Simple Songs
 
 10首基础旋律SSS儿歌，TPR指令儿歌。
 
-![image-20241028122102428](https://www.ewwe.net/wiki/images\image-20241028122102428.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122102428.png" alt="image-20241028122102428" style="zoom: 50%;" />
 
-![image-20241028122117124](https://www.ewwe.net/wiki/images\image-20241028122117124.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122117124.png" alt="image-20241028122117124" style="zoom:50%;" />
 
 
 
 ------
 
-![image-20241028122141692](https://www.ewwe.net/wiki/images\image-20241028122141692.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122141692.png" alt="image-20241028122141692" style="zoom:50%;" />
 
 
 
-![image-20241028122150663](https://www.ewwe.net/wiki/imagesimage-20241028122150663.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122150663.png" alt="image-20241028122150663" style="zoom:50%;" />
 
 
 
-![image-20241028122203779](https://www.ewwe.net/wiki/images\image-20241028122203779.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122203779.png" alt="image-20241028122203779" style="zoom:50%;" />
 
 
 
-![image-20241028122218702](https://www.ewwe.net/wiki/images\image-20241028122218702.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122218702.png" alt="image-20241028122218702" style="zoom:50%;" />
 
-![image-20241028122239310](https://www.ewwe.net/wiki/images\image-20241028122239310.png)
+<img src="https://www.ewwe.net/wiki/images/image-20241028122239310.png" alt="image-20241028122239310" style="zoom:50%;" />
 
 
 
@@ -84,7 +84,7 @@ Super Simple Songs
 
 ## 廖彩杏
 
-《用有声书轻松听出英语力》![image-20241028121244423](G:\Github\link0502.github.io\wiki\images\image-20241028121244423.png)
+《用有声书轻松听出英语力》<img src="G:\Github\link0502.github.io\wiki\images\image-20241028121244423.png" alt="image-20241028121244423" style="zoom:50%;" />
 
 
 
