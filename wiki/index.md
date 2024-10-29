@@ -51,18 +51,6 @@
 
 
 
-------
-
-<img src="https://www.ewwe.net/wiki/images/image-20241028122141692.png" alt="image-20241028122141692" style="zoom: 25%;" />
-<img src="https://www.ewwe.net/wiki/images/image-20241028122150663.png" alt="image-20241028122150663" style="zoom: 25%;" />
-<img src="https://www.ewwe.net/wiki/images/image-20241028122203779.png" alt="image-20241028122203779" style="zoom: 25%;" />
-<img src="https://www.ewwe.net/wiki/images/image-20241028122218702.png" alt="image-20241028122218702" style="zoom: 25%;" />
-<img src="https://www.ewwe.net/wiki/images/image-20241028122239310.png" alt="image-20241028122239310" style="zoom: 25%;" />
-
-
-
-
-
 
 ## 磨耳朵
 
