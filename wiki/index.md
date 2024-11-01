@@ -46,7 +46,7 @@
 
 ## 英语儿歌 
 
-### Super Simple Songs
+### [Super Simple Songs](https://supersimple.com/super-simple-songs/)
 
 10首基础旋律SSS儿歌，TPR指令儿歌。
 
