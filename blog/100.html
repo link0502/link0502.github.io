@@ -5,420 +5,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>我的博客</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=DM+Mono:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
 ```
-:root {
-  --ink: #1a1714;
-  --ink-light: #5a534d;
-  --ink-faint: #9b948d;
-  --paper: #f7f4ef;
-  --paper-warm: #ede9e2;
-  --paper-mid: #e0dbd2;
-  --accent: #b5460f;
-  --accent-soft: #e8845a;
-  --rule: rgba(90,83,77,0.18);
-  --serif: 'Noto Serif SC', 'Songti SC', serif;
-  --mono: 'DM Mono', monospace;
-  --display: 'Cormorant Garamond', 'Noto Serif SC', serif;
-}
-
-html { scroll-behavior: smooth; }
-
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--serif);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* ── Grain overlay ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  background-size: 256px 256px;
-  z-index: 1000;
-  opacity: 0.5;
-}
-
-/* ── Header ── */
-header {
-  padding: 3.5rem 0 2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--rule);
-  position: relative;
-}
-
-header::after {
-  content: '';
-  display: block;
-  width: 3rem;
-  height: 2px;
-  background: var(--accent);
-  margin: 1.8rem auto 0;
-}
-
-.site-label {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
-  color: var(--ink-faint);
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-}
-
-h1 {
-  font-family: var(--display);
-  font-weight: 300;
-  font-style: italic;
-  font-size: clamp(2.8rem, 7vw, 5.2rem);
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  line-height: 1.05;
-}
-
-.site-desc {
-  margin-top: 1rem;
-  font-size: 0.88rem;
-  color: var(--ink-light);
-  letter-spacing: 0.04em;
-  font-weight: 300;
-}
-
-/* ── Nav ── */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2.4rem;
-  padding: 1.4rem 1rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-nav a {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  text-decoration: none;
-  transition: color 0.2s;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0; right: 0;
-  height: 1px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transition: transform 0.25s;
-}
-
-nav a:hover { color: var(--accent); }
-nav a:hover::after { transform: scaleX(1); }
-
-/* ── Layout ── */
-.container {
-  max-width: 1080px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 3rem 1.5rem 5rem;
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+  background: #fff;
 }
 
-.main-layout {
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 0;
-  align-items: start;
-}
+header { margin-bottom: 2.5rem; }
+h1 { font-size: 1.5rem; font-weight: 700; }
+header p { margin-top: 0.3rem; color: #888; font-size: 0.9rem; }
 
-/* ── Article list ── */
-.articles {
-  padding: 0;
-  border-right: 1px solid var(--rule);
-}
-
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 2.2rem 2rem 1.4rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.section-head h2 {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  font-weight: 400;
-}
-
-.section-head .count {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--paper);
-  background: var(--accent);
-  padding: 0.15em 0.55em;
-  border-radius: 20px;
-}
-
-/* ── Article card ── */
-.article-card {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 0;
-  border-bottom: 1px solid var(--rule);
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s;
-  animation: fadeUp 0.5s ease both;
-}
-
-.article-card:hover { background: var(--paper-warm); }
-
-.article-card:hover .card-title { color: var(--accent); }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.article-card:nth-child(1) { animation-delay: 0.05s; }
-.article-card:nth-child(2) { animation-delay: 0.10s; }
-.article-card:nth-child(3) { animation-delay: 0.15s; }
-.article-card:nth-child(4) { animation-delay: 0.20s; }
-.article-card:nth-child(5) { animation-delay: 0.25s; }
-.article-card:nth-child(6) { animation-delay: 0.30s; }
-
-.card-date {
-  padding: 1.8rem 1rem 1.8rem 2rem;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  color: var(--ink-faint);
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-  border-right: 1px solid var(--rule);
-}
-
-.card-date .day {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--ink-light);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.2rem;
-}
-
-.card-body {
-  padding: 1.8rem 2rem;
-}
-
-.card-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.6rem;
-}
-
-.tag {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  padding: 0.15em 0.6em;
-  border: 1px solid var(--accent-soft);
-  border-radius: 2px;
-}
-
-.card-title {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.45;
-  color: var(--ink);
-  margin-bottom: 0.5rem;
-  transition: color 0.2s;
-}
-
-.card-excerpt {
-  font-size: 0.82rem;
-  color: var(--ink-light);
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-/* ── Featured first card ── */
-.article-card.featured {
-  grid-column: 1 / -1;
-  grid-template-columns: 1fr;
-  background: var(--paper-warm);
-  border-left: 3px solid var(--accent);
-}
-
-.article-card.featured .card-date {
-  border-right: none;
-  padding: 1.5rem 2rem 0;
-}
-
-.article-card.featured .card-body {
-  padding: 0.6rem 2rem 1.8rem;
-}
-
-.article-card.featured .card-title {
-  font-size: 1.4rem;
-}
-
-/* ── Sidebar ── */
-.sidebar {
-  padding: 2.2rem 1.8rem;
-}
-
-.sidebar-section {
-  margin-bottom: 2.5rem;
-}
-
-.sidebar-label {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-/* Search */
-.search-wrap {
-  position: relative;
-}
-
-#search {
+input[type="text"] {
   width: 100%;
-  padding: 0.6rem 2.2rem 0.6rem 0.8rem;
-  background: var(--paper-mid);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--ink);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: inherit;
   outline: none;
-  transition: border-color 0.2s;
 }
+input[type="text"]:focus { border-color: #999; }
 
-#search:focus { border-color: var(--accent); }
+ul { list-style: none; }
 
-#search::placeholder { color: var(--ink-faint); }
-
-.search-icon {
-  position: absolute;
-  right: 0.7rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--ink-faint);
-  font-size: 0.8rem;
-  pointer-events: none;
-}
-
-/* Tag cloud */
-.tag-cloud {
+li {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f0f0f0;
 }
+li:last-child { border-bottom: none; }
 
-.tag-cloud a {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--ink-light);
-  text-decoration: none;
-  padding: 0.25em 0.7em;
-  border: 1px solid var(--paper-mid);
-  border-radius: 2px;
-  background: var(--paper-warm);
-  transition: all 0.2s;
-}
-
-.tag-cloud a:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--paper);
-}
-
-/* Archive list */
-.archive-list { list-style: none; }
-
-.archive-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.45rem 0;
-  border-bottom: 1px dotted var(--paper-mid);
-}
-
-.archive-list a {
+time {
+  flex-shrink: 0;
   font-size: 0.8rem;
-  color: var(--ink-light);
-  text-decoration: none;
+  color: #aaa;
+  width: 6rem;
 }
 
-.archive-list a:hover { color: var(--accent); }
+a { color: #222; text-decoration: none; font-size: 0.97rem; }
+a:hover { color: #0066cc; }
 
-.archive-count {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--ink-faint);
-}
+.tag { font-size: 0.72rem; color: #bbb; margin-left: 0.5rem; }
 
-/* ── Footer ── */
-footer {
-  border-top: 1px solid var(--rule);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
+#no-result { display: none; padding: 2rem 0; color: #aaa; font-size: 0.9rem; }
 
-footer p {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  color: var(--ink-faint);
-}
-
-footer strong { color: var(--accent); font-style: italic; font-family: var(--display); font-weight: 300; font-size: 0.9rem; letter-spacing: 0; }
-
-/* ── Search filter ── */
-.article-card.hidden { display: none; }
-
-/* ── No result ── */
-#no-result {
-  display: none;
-  padding: 3rem 2rem;
-  text-align: center;
-  color: var(--ink-faint);
-  font-size: 0.85rem;
-}
-
-/* ── Responsive ── */
-@media (max-width: 720px) {
-  .main-layout { grid-template-columns: 1fr; }
-  .articles { border-right: none; }
-  .sidebar { border-top: 1px solid var(--rule); padding: 2rem 1.5rem; }
-  .article-card { grid-template-columns: 60px 1fr; }
-  .article-card.featured { grid-template-columns: 1fr; }
-}
+footer { margin-top: 3rem; font-size: 0.8rem; color: #ccc; }
 ```
 
   </style>
@@ -426,207 +69,57 @@ footer strong { color: var(--accent); font-style: italic; font-family: var(--dis
 <body>
 
 <header>
-  <p class="site-label">Personal Journal · 个人笔记</p>
   <h1>我的博客</h1>
-  <p class="site-desc">记录思考 · 整理所学 · 分享所见</p>
+  <p>记录思考，整理所学</p>
 </header>
 
-<nav>
-  <a href="#">首页</a>
-  <a href="#">文章</a>
-  <a href="#">标签</a>
-  <a href="#">归档</a>
-  <a href="#">关于</a>
-</nav>
+<input type="text" id="search" placeholder="搜索文章…" autocomplete="off" />
 
-<div class="container" style="margin-top:0;">
-  <div class="main-layout">
+<ul id="list">
+  <li data-text="用 Claude 生成精美 HTML 页面的完整工作流 设计 工具">
+    <time>2026-05-05</time>
+    <span><a href="article-1.html">用 Claude 生成精美 HTML 页面的完整工作流</a><span class="tag">设计 · 工具</span></span>
+  </li>
+  <li data-text="CSS Grid 布局备忘录 CSS 前端">
+    <time>2026-04-28</time>
+    <span><a href="article-2.html">CSS Grid 布局备忘录</a><span class="tag">CSS · 前端</span></span>
+  </li>
+  <li data-text="我的 2026 年工具栈全景 工具 效率">
+    <time>2026-04-20</time>
+    <span><a href="article-3.html">我的 2026 年工具栈全景</a><span class="tag">工具 · 效率</span></span>
+  </li>
+  <li data-text="深度工作读后感与执行方案 读书 思考">
+    <time>2026-04-12</time>
+    <span><a href="article-4.html">《深度工作》读后感与执行方案</a><span class="tag">读书 · 思考</span></span>
+  </li>
+  <li data-text="理解 Promise 与 async/await 的执行顺序 JavaScript 前端">
+    <time>2026-04-03</time>
+    <span><a href="article-5.html">理解 Promise 与 async/await 的执行顺序</a><span class="tag">JavaScript</span></span>
+  </li>
+  <li data-text="春天与写作 随笔 生活">
+    <time>2026-03-22</time>
+    <span><a href="article-6.html">春天与写作</a><span class="tag">随笔</span></span>
+  </li>
+</ul>
 
-```
-<!-- Article list -->
-<main class="articles">
-  <div class="section-head">
-    <h2>全部文章</h2>
-    <span class="count" id="article-count">6</span>
-  </div>
+<p id="no-result">没有找到相关文章。</p>
 
-  <!-- ★ 置顶 / 精选 -->
-  <a class="article-card featured" href="article-1.html" data-tags="设计 工具">
-    <div class="card-date">
-      <span class="day">05</span>
-      May 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags">
-        <span class="tag">置顶</span>
-        <span class="tag">设计</span>
-      </div>
-      <div class="card-title">用 Claude 生成精美 HTML 页面的完整工作流</div>
-      <p class="card-excerpt">从需求拆解到样式调优，记录了我用 AI 辅助生成静态页面的全部步骤，以及踩过的坑和最终沉淀下来的最佳实践。</p>
-    </div>
-  </a>
-
-  <a class="article-card" href="article-2.html" data-tags="CSS 前端">
-    <div class="card-date">
-      <span class="day">28</span>
-      Apr 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags"><span class="tag">CSS</span><span class="tag">前端</span></div>
-      <div class="card-title">CSS Grid 布局备忘录</div>
-      <p class="card-excerpt">系统整理了 Grid 的核心属性与常见模式，附带可直接复用的代码片段。</p>
-    </div>
-  </a>
-
-  <a class="article-card" href="article-3.html" data-tags="工具 效率">
-    <div class="card-date">
-      <span class="day">20</span>
-      Apr 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags"><span class="tag">工具</span><span class="tag">效率</span></div>
-      <div class="card-title">我的 2026 年工具栈全景</div>
-      <p class="card-excerpt">列出了写作、开发、设计三个场景下我每天实际在用的软件与服务，并说明选择理由。</p>
-    </div>
-  </a>
-
-  <a class="article-card" href="article-4.html" data-tags="读书 思考">
-    <div class="card-date">
-      <span class="day">12</span>
-      Apr 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags"><span class="tag">读书</span><span class="tag">思考</span></div>
-      <div class="card-title">《深度工作》读后感与执行方案</div>
-      <p class="card-excerpt">把书中的核心框架提炼成可操作的每周计划，并记录了执行三周后的真实体感。</p>
-    </div>
-  </a>
-
-  <a class="article-card" href="article-5.html" data-tags="JavaScript 前端">
-    <div class="card-date">
-      <span class="day">03</span>
-      Apr 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags"><span class="tag">JavaScript</span></div>
-      <div class="card-title">理解 Promise 与 async/await 的执行顺序</div>
-      <p class="card-excerpt">通过几个精心设计的例子，彻底弄清微任务队列与宏任务队列的调度机制。</p>
-    </div>
-  </a>
-
-  <a class="article-card" href="article-6.html" data-tags="生活 随笔">
-    <div class="card-date">
-      <span class="day">22</span>
-      Mar 2026
-    </div>
-    <div class="card-body">
-      <div class="card-tags"><span class="tag">随笔</span></div>
-      <div class="card-title">春天与写作</div>
-      <p class="card-excerpt">一篇短文。窗外的玉兰开了，突然想说一些关于记录与遗忘的话。</p>
-    </div>
-  </a>
-
-  <p id="no-result">没有找到相关文章。</p>
-</main>
-
-<!-- Sidebar -->
-<aside class="sidebar">
-
-  <div class="sidebar-section">
-    <p class="sidebar-label">搜索</p>
-    <div class="search-wrap">
-      <input type="text" id="search" placeholder="输入关键词…" autocomplete="off" />
-      <span class="search-icon">⌕</span>
-    </div>
-  </div>
-
-  <div class="sidebar-section">
-    <p class="sidebar-label">标签</p>
-    <div class="tag-cloud" id="tag-cloud">
-      <a href="#" data-filter="设计">设计</a>
-      <a href="#" data-filter="CSS">CSS</a>
-      <a href="#" data-filter="前端">前端</a>
-      <a href="#" data-filter="工具">工具</a>
-      <a href="#" data-filter="效率">效率</a>
-      <a href="#" data-filter="读书">读书</a>
-      <a href="#" data-filter="思考">思考</a>
-      <a href="#" data-filter="JavaScript">JavaScript</a>
-      <a href="#" data-filter="随笔">随笔</a>
-    </div>
-  </div>
-
-  <div class="sidebar-section">
-    <p class="sidebar-label">归档</p>
-    <ul class="archive-list">
-      <li><a href="#">2026 年 5 月</a><span class="archive-count">1</span></li>
-      <li><a href="#">2026 年 4 月</a><span class="archive-count">4</span></li>
-      <li><a href="#">2026 年 3 月</a><span class="archive-count">1</span></li>
-    </ul>
-  </div>
-
-</aside>
-```
-
-  </div>
-</div>
-
-<footer>
-  <p>用心记录 · <strong>我的博客</strong> · 2026</p>
-</footer>
+<footer>© 2026 我的博客</footer>
 
 <script>
-  // ── Search ──
-  const searchInput = document.getElementById('search');
-  const cards = document.querySelectorAll('.article-card');
+  const input = document.getElementById('search');
+  const items = document.querySelectorAll('#list li');
   const noResult = document.getElementById('no-result');
-  const countEl = document.getElementById('article-count');
 
-  function filterCards() {
-    const q = searchInput.value.trim().toLowerCase();
-    let visible = 0;
-    cards.forEach(card => {
-      const text = (card.textContent || '').toLowerCase();
-      const match = !q || text.includes(q);
-      card.classList.toggle('hidden', !match);
-      if (match) visible++;
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let count = 0;
+    items.forEach(li => {
+      const match = !q || li.dataset.text.toLowerCase().includes(q);
+      li.style.display = match ? '' : 'none';
+      if (match) count++;
     });
-    noResult.style.display = visible === 0 ? 'block' : 'none';
-    countEl.textContent = visible;
-  }
-
-  searchInput.addEventListener('input', filterCards);
-
-  // ── Tag filter ──
-  document.getElementById('tag-cloud').addEventListener('click', e => {
-    e.preventDefault();
-    const link = e.target.closest('a');
-    if (!link) return;
-    const filter = link.dataset.filter;
-
-    // Toggle active
-    const isActive = link.classList.contains('active');
-    document.querySelectorAll('.tag-cloud a').forEach(a => a.classList.remove('active'));
-    if (!isActive) {
-      link.classList.add('active');
-      link.style.background = 'var(--accent)';
-      link.style.borderColor = 'var(--accent)';
-      link.style.color = 'var(--paper)';
-    } else {
-      link.style.cssText = '';
-    }
-
-    // Filter
-    const activeFilter = isActive ? null : filter;
-    let visible = 0;
-    cards.forEach(card => {
-      const tags = (card.dataset.tags || '').toLowerCase();
-      const match = !activeFilter || tags.includes(activeFilter.toLowerCase());
-      card.classList.toggle('hidden', !match);
-      if (match) visible++;
-    });
-    noResult.style.display = visible === 0 ? 'block' : 'none';
-    countEl.textContent = visible;
-    searchInput.value = '';
+    noResult.style.display = count === 0 ? 'block' : 'none';
   });
 </script>
 
